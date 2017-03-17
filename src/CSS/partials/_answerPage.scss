@@ -1,0 +1,27 @@
+@import 'partials/variables';
+
+.ZombieList{
+	height: 100vh;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+}
+.NuclearList{	
+	height: 100vh;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+ }
+
+ .AlienList{  
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+ }

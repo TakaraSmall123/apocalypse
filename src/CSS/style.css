@@ -1,0 +1,84 @@
+.titlePageIntro {
+  height: 100vh;
+  background-color: black;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.titlePageIntro h1 {
+  color: white;
+  font-size: 6.5em;
+  margin: 5px; }
+
+.titlePageDescription {
+  text-align: center;
+  color: white;
+  margin: auto; }
+
+.titlePageIntro p {
+  color: white;
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold; }
+
+.titlePageIntro button {
+  width: 150px;
+  padding: 12px 0 12px 0;
+  border: 5px solid black;
+  background-color: white;
+  font-size: 1.5em;
+  border-radius: 7px; }
+
+.ZombieList {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: orange; }
+
+.NuclearList {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: pink; }
+
+.AlienList {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: lightblue; }
+
+html {
+  font-size: 62.5%; }
