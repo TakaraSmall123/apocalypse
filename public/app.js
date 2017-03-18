@@ -37162,32 +37162,130 @@ var App = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
         _this.state = {
-            movies: []
+            movies: [],
+            userSelection: ''
         };
 
-        // this.ZombieList = this.ZombieList.bind(this);
+        // this.addItem= this.addItem.bind(this);
+        _this.getUsersChoice = _this.getUsersChoice.bind(_this);
+        _this.getMovie = _this.getMovie.bind(_this);
+        // this.ZombieList= this.ZombieList.bind(this);
         return _this;
     }
 
     _createClass(App, [{
+        key: 'getUsersChoice',
+        value: function getUsersChoice(e) {
+            console.log(e.target.value);
+            this.setState({
+                userSelection: e.target.value
+            });
+        }
+    }, {
+        key: 'getMovie',
+        value: function getMovie(e) {
+            var _this2 = this;
+
+            e.preventDefault();
+            console.log("working");
+            if (this.state.getUsersChoice === "") {
+                alert('you left the box empty');
+            } else {
+                (0, _jquery.ajax)({
+                    url: 'https://api.themoviedb.org/3/search/movie',
+                    method: 'GET',
+                    dataType: 'jsonp',
+                    data: {
+                        api_key: apiKey,
+                        language: "en-US",
+                        // sort_by: "popularity.desc",
+                        include_adult: "false",
+                        // page: "1",
+                        total_results: "1",
+                        query: this.state.userSelection
+                    }
+                }).then(function (movieList) {
+                    console.log('yo, this is the new clicks for the ' + _this2.state.userSelection + ' data', movieList);
+                    _this2.setState({
+                        movies: movieList.results
+                    });
+                });
+            }
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {}
+    }, {
         key: 'render',
         value: function render() {
-
-            _react2.default.createElement(
-                'div',
-                { className: 'theseAreTheResultsThatAreReturned' },
-                this.state.movies.map(function (movie, i) {
-                    return _react2.default.createElement('div', { key: 'movie-' + i, className: 'movieReturnList' });
-                })
-            );
-
             return _react2.default.createElement(
                 'div',
                 { className: 'header' },
-                _react2.default.createElement(Survival, null),
-                _react2.default.createElement(ZombieList, null),
-                _react2.default.createElement(NuclearList, null),
-                _react2.default.createElement(AlienList, null)
+                _react2.default.createElement(
+                    'div',
+                    { className: 'titlePageIntro' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'titlePageDescription' },
+                        _react2.default.createElement(
+                            'h1',
+                            null,
+                            'Apocalypse Survival '
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'The all-you-need-to-know guide to survive the end of the world'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            '(Choose your scenario below)'
+                        ),
+                        _react2.default.createElement(
+                            'nav',
+                            { className: 'homePageIntro' },
+                            _react2.default.createElement(
+                                _reactRouter.Link,
+                                { to: '/' },
+                                'Home'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'form',
+                            { onSubmit: this.getMovie },
+                            _react2.default.createElement(
+                                'label',
+                                null,
+                                'zombie'
+                            ),
+                            _react2.default.createElement('input', { type: 'radio', name: 'movies', value: 'zombie', onChange: this.getUsersChoice }),
+                            _react2.default.createElement(
+                                'label',
+                                null,
+                                'alien'
+                            ),
+                            _react2.default.createElement('input', { type: 'radio', name: 'movies', value: 'alien', onChange: this.getUsersChoice }),
+                            _react2.default.createElement(
+                                'label',
+                                null,
+                                'nuclear'
+                            ),
+                            _react2.default.createElement('input', { type: 'radio', name: 'movies', value: 'nuclear', onChange: this.getUsersChoice }),
+                            _react2.default.createElement('input', { type: 'submit' })
+                        ),
+                        _react2.default.createElement('div', null),
+                        this.state.movies.map(function (item) {
+                            console.log(item);
+                            return _react2.default.createElement(
+                                'h2',
+                                null,
+                                item.original_title
+                            );
+                        })
+                    )
+                ),
+                this.props.children
             );
         }
     }]);
@@ -37225,8 +37323,7 @@ var Survival = function (_React$Component2) {
                         'p',
                         null,
                         'The all-you-need-to-know guide to survive the end of the world'
-                    ),
-                    _react2.default.createElement(Button, null)
+                    )
                 ),
                 _react2.default.createElement(
                     'nav',
@@ -37244,175 +37341,36 @@ var Survival = function (_React$Component2) {
     return Survival;
 }(_react2.default.Component);
 
-// Button section
-
-
-var Button = function (_React$Component3) {
-    _inherits(Button, _React$Component3);
-
-    function Button() {
-        _classCallCheck(this, Button);
-
-        return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
-    }
-
-    _createClass(Button, [{
-        key: 'handleClickZombie',
-        value: function handleClickZombie() {
-            var _this4 = this;
-
-            (0, _jquery.ajax)({
-                url: 'https://api.themoviedb.org/3/search/movie',
-                method: 'GET',
-                dataType: 'jsonp',
-                data: {
-                    api_key: apiKey,
-                    language: "en-US",
-                    sort_by: "popularity.desc",
-                    include_adult: "false",
-                    page: "1",
-                    query: "zombie"
-                }
-            }).then(function (movieList) {
-                console.log('yo, this is the new clicks for the zombie data', movieList);
-                _this4.setState({
-                    movie: movieList.results
-                });
-                console.log('this is setState');
-            });
-        }
-    }, {
-        key: 'handleClickNuclear',
-        value: function handleClickNuclear() {
-            (0, _jquery.ajax)({
-                url: 'https://api.themoviedb.org/3/search/movie',
-                method: 'GET',
-                dataType: 'jsonp',
-                data: {
-                    api_key: apiKey,
-                    language: "en-US",
-                    sort_by: "popularity.desc",
-                    include_adult: "false",
-                    page: "1",
-                    query: "nuclear"
-                }
-            }).then(function (movieList) {
-                console.log('yo, this is the new clicks for the nuclear list', movieList);
-            });
-        }
-    }, {
-        key: 'handleClickAlien',
-        value: function handleClickAlien() {
-            (0, _jquery.ajax)({
-                url: 'https://api.themoviedb.org/3/search/movie',
-                method: 'GET',
-                dataType: 'jsonp',
-                data: {
-                    api_key: apiKey,
-                    language: "en-US",
-                    sort_by: "popularity.desc",
-                    include_adult: "false",
-                    page: "1",
-                    query: "alien"
-                }
-            }).then(function (movieList) {
-                console.log('yo, this is the new clicks for the alien list', movieList);
-            });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: '/zombie' },
-                    _react2.default.createElement(
-                        'button',
-                        { className: 'zombie', onClick: this.handleClickZombie },
-                        'ZOMBIE'
-                    )
-                ),
-                this.props.children,
-                _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: '/nuclear' },
-                    _react2.default.createElement(
-                        'button',
-                        { className: 'nuclear', onClick: this.handleClickNuclear },
-                        'NUCLEAR SHOWDOWN'
-                    )
-                ),
-                this.props.children,
-                _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: '/alien' },
-                    _react2.default.createElement(
-                        'button',
-                        { className: 'alien', onClick: this.handleClickAlien },
-                        'ALIEN INVASION'
-                    )
-                ),
-                this.props.children
-            );
-        }
-    }]);
-
-    return Button;
-}(_react2.default.Component);
-
 // 'ZombieList' section
 
 
-var ZombieList = function (_React$Component4) {
-    _inherits(ZombieList, _React$Component4);
-
-    function ZombieList() {
-        _classCallCheck(this, ZombieList);
-
-        var _this5 = _possibleConstructorReturn(this, (ZombieList.__proto__ || Object.getPrototypeOf(ZombieList)).call(this));
-
-        _this5.state = {
-            movies: {}
-        };
-        return _this5;
-    }
-
-    _createClass(ZombieList, [{
-        key: 'render',
-        value: function render() {
-
-            return _react2.default.createElement(
-                'div',
-                { className: 'ZombieList' },
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    'Deck of cards: While away the time playing with survivors'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    'Cast-iron skillet: Cooking tool and tool to neutralize zombies'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    'Shelter: Look for any items (garbage, bags, etc) that you can stitch together to turn into a house'
-                )
-            );
-        }
-    }]);
-
-    return ZombieList;
-}(_react2.default.Component);
+var ZombieList = function ZombieList(props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'ZombieList' },
+        _react2.default.createElement(
+            'p',
+            null,
+            'Deck of cards: While away the time playing with survivors'
+        ),
+        _react2.default.createElement(
+            'p',
+            null,
+            'Cast-iron skillet: Cooking tool and tool to neutralize zombies'
+        ),
+        _react2.default.createElement(
+            'p',
+            null,
+            'Shelter: Look for any items (garbage, bags, etc) that you can stitch together to turn into a house'
+        ),
+        props.getMovie
+    );
+};
 
 // 'NuclearList' section
 
-
-var NuclearList = function (_React$Component5) {
-    _inherits(NuclearList, _React$Component5);
+var NuclearList = function (_React$Component3) {
+    _inherits(NuclearList, _React$Component3);
 
     function NuclearList() {
         _classCallCheck(this, NuclearList);
@@ -37452,8 +37410,8 @@ var NuclearList = function (_React$Component5) {
 //'AlienList' section
 
 
-var AlienList = function (_React$Component6) {
-    _inherits(AlienList, _React$Component6);
+var AlienList = function (_React$Component4) {
+    _inherits(AlienList, _React$Component4);
 
     function AlienList() {
         _classCallCheck(this, AlienList);
@@ -37488,18 +37446,18 @@ var AlienList = function (_React$Component6) {
 
     return AlienList;
 }(_react2.default.Component);
-//End of 'AlienList' section
+// End of 'AlienList' section
 
 
 _reactDom2.default.render(_react2.default.createElement(
     _reactRouter.Router,
     { history: _reactRouter.browserHistory },
-    _react2.default.createElement(_reactRouter.Route, { path: '/zombie', component: ZombieList }),
-    _react2.default.createElement(_reactRouter.Route, { path: '/nuclear', component: NuclearList }),
-    _react2.default.createElement(_reactRouter.Route, { path: '/alien', component: AlienList }),
     _react2.default.createElement(
         _reactRouter.Route,
         { path: '/', component: App },
+        _react2.default.createElement(_reactRouter.Route, { path: '/nuclear', component: NuclearList }),
+        _react2.default.createElement(_reactRouter.Route, { path: '/alien', component: AlienList }),
+        _react2.default.createElement(_reactRouter.Route, { path: '/zombie', component: ZombieList }),
         _react2.default.createElement(_reactRouter.Route, { path: '/home', component: App })
     )
 ), document.getElementById('app'));
