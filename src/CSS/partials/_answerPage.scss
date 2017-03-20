@@ -1,19 +1,18 @@
 @import 'partials/variables';
 
-.ZombieList{
-	height: 100vh;
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
+h1{
+
+flex-direction: column;
+justify-content: center;
+text-align: center;
+
 }
+
 .NuclearList{	
 	height: 100vh;
 	display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: pink;
  }
 
@@ -21,7 +20,69 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    font-size: 20px;
+    // justify-content: center;
     align-items: center;
     background-color: lightblue;
  }
+
+
+//zombie
+.ZombieList{
+height: 100vh;
+display: flex;
+flex-direction: column;
+// justify-content: center;
+background-color: orange;
+padding: 10px 20px;
+font-size: 20px;
+}
+
+
+.zombieAnimated{
+display: flex;
+// border: 2px solid black;
+}
+
+.zombieList{
+    text-align: left;
+}
+
+.zombieAnimated img {
+    align-items: flex-start; 
+}
+
+.ZombieButton {
+padding: 15px 15px;
+border: 2px solid black;
+background-color: white;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+
+//ALIEN LIST
+
+.AlienList{
+    text-align: left;
+}
+
+
+.NuclearButton {
+padding: 15px 15px;
+border: 2px solid black;
+background-color: white;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+
+}
+
+.monster {
+    transform: translateX(0);
+    transition: transform 0.2s;
+}
+
+.isHit {
+   transform: translateX(-50px);
+}

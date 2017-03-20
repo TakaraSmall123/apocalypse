@@ -10,90 +10,26 @@ class App extends React.Component {
     constructor(){
         super();
         this.state = {
-            movies: [],
-            userSelection: ''
-        }
-
-    // this.addItem= this.addItem.bind(this);
-    this.getUsersChoice= this.getUsersChoice.bind(this);
-     this.getMovie= this.getMovie.bind(this);
-     // this.ZombieList= this.ZombieList.bind(this);
-    }
-
-    getUsersChoice(e){
-        console.log(e.target.value);
-        this.setState({
-            userSelection: e.target.value
-        })
-    }
-
-    getMovie(e) {
-        e.preventDefault();
-        console.log("working")
-        if(this.state.getUsersChoice === "") {
-        alert('you left the box empty')
-        } else {
-            ajax({
-                url: 'https://api.themoviedb.org/3/search/movie',
-                method: 'GET',
-                dataType: 'jsonp',
-                data: {
-                    api_key: apiKey,
-                    language: "en-US",
-                    // sort_by: "popularity.desc",
-                    include_adult: "false",
-                    // page: "1",
-                    total_results: "1",
-                    query: this.state.userSelection
-                }
-            })
-            .then((movieList) => {
-                    console.log(`yo, this is the new clicks for the ${this.state.userSelection} data`, movieList);
-                        this.setState({
-                            movies: movieList.results
-                        });
-                });
+            movies: []
         }
     }
-
-
-    componentDidMount(){
-        
-        }
 
     render() {
-		return (
-			<div className="header">
-				<div className="titlePageIntro">
-                <div className="titlePageDescription">
-                    <h1>Apocalypse Survival </h1>
-                    <p>The all-you-need-to-know guide to survive the end of the world</p>
-                    <p>(Choose your scenario below)</p>
-            
-                <nav className="homePageIntro">
-                    <Link to="/">Home</Link>
-                </nav> 
-                    <form onSubmit={this.getMovie}>
-                        <label>zombie</label>
-                       <input type="radio" name="movies" value="zombie" onChange={this.getUsersChoice}/>
-                        <label>alien</label>
-                        <input type="radio" name="movies" value="alien" onChange={this.getUsersChoice}/>
-                        <label>nuclear</label>
-                        <input type="radio" name="movies" value="nuclear" onChange={this.getUsersChoice}/>
-                        <input type="submit" />
-                    </form>
-                <div>
-                  </div>
-                    {this.state.movies.map((item) => {
-                        console.log(item);
-                        return <h2>{item.original_title}</h2>
-                    })}
-                </div>
-                 </div>
-                {this.props.children}
-		   </div>
-		)
-	}
+        <div className='theseAreTheResultsThatAreReturned'>
+            {this.state.movies.map((movie, i) => {
+                return (
+                    <div key={`movie-${i}`} className='movieReturnList'>
+                    </div>
+                )
+            })}
+        </div>
+       
+        return (
+            <div className="header">
+                <Survival/>
+           </div>
+        )
+    }
 }
 
 // Survival section
@@ -102,8 +38,14 @@ class Survival extends React.Component {
         return (
             <div className="titlePageIntro">
                 <div className="titlePageDescription">
-                    <h1>Apocalypse Survival </h1>
+                    <h1>Apocalypse Survival</h1>
                     <p>The all-you-need-to-know guide to survive the end of the world</p>
+                      <Link to="/zombie"><button className="zombie">ZOMBIE</button></Link>
+                 {this.props.children}
+                <Link to="/nuclear"><button className="nuclear" onClick={this.handleClickNuclear}>NUCLEAR SHOWDOWN</button></Link>
+                 {this.props.children}
+                <Link to="/alien"><button className="alien" onClick={this.handleClickAlien}>ALIEN INVASION</button></Link>
+                 {this.props.children}
                 </div>
                 <nav className="homePageIntro">
                     <Link to="/">Home</Link>
@@ -113,27 +55,222 @@ class Survival extends React.Component {
     }
 }
 
-// 'ZombieList' section
-const ZombieList = (props) => {
-        return (
-            <div className="ZombieList">
-                <p>Deck of cards: While away the time playing with survivors</p>
-                <p>Cast-iron skillet: Cooking tool and tool to neutralize zombies</p>
-                <p>Shelter: Look for any items (garbage, bags, etc) that you can stitch together to turn into a house</p>
-                {props.getMovie}
-                </div>
+// class alienForm extends React.Component {
+//   constructor() {
+//     super()
+//   }
+//   render(){
+//     return(
+//     <div className="alienAnimated">
+//        <Monster image="../src/images/alien.png" health={10} />
+//     </div>
+//     )
+//   }
+// }
+
+//START OF ZOMBIE STUFF
+class AlienForm extends React.Component {
+      constructor() {
+        super();
+      }
+      render(){
+        return(
+            <div className="alienAnimated">
+                <Monster image="../src/images/zombie2.png" health={5} />
+                <Monster image="../src/images/alien.png" health={10} />
+            </div>
         )
     }
 
+}
+
+class ZombieForm extends React.Component {
+      constructor() {
+        super();
+
+      }
+      render(){
+        return(
+            <div className="zombieAnimated">
+                <Monster image="../src/images/zombie2.png" health={5} name="Zombie"/>
+                <Monster image="../src/images/alien.png" health={10} name=""/>
+            </div>
+        )
+    }
+
+}
+
+
+class Monster extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            health: 3,
+            image: "../src/images/zombie2.png"
+        }
+        this.takeDamage = this.takeDamage.bind(this);
+    }
+    takeDamage() {
+        let health = this.state.health;
+        let newHealth = health - 1;
+
+        this.setState({
+            health: newHealth
+        });
+
+        this.monster.classList.add('isHit');
+        setTimeout(() => {
+            this.monster.classList.remove('isHit');
+        }, 300);
+
+    }
+
+    render() {
+        return (
+            <div className="monster" ref={element => { this.monster = element; }}>
+                {this.state.health === 0 ?
+                    <span>{this.props.name} Dead</span>
+                :
+                    <img src={this.state.image} onClick={this.takeDamage} /> 
+                }
+                <p>{this.state.health}</p>
+            </div>
+        )
+    }
+    componentDidMount() {
+        this.setState({
+            health: this.props.health,
+            image: this.props.image
+        });
+
+    }
+}
+
+
+// 'ZombieList' section
+class ZombieList extends React.Component {
+  constructor() {
+    super();
+
+        this.state = {
+            movies: [],
+        }
+
+    }
+
+   onClick(e){
+    e.preventDefault();
+    this.setState({showZ: !this.state.showZ})
+  }
+
+    componentDidMount() {
+            ajax({
+            url: 'https://api.themoviedb.org/3/search/movie',
+            method: 'GET',
+            dataType: 'jsonp',
+            data: {
+            api_key: apiKey,
+            language: "en-US",
+            sort_by: "popularity.desc",
+            include_adult: "false",
+            page: "1",
+            query: "zombie"
+        }
+    }).then((movieList) => {
+        console.log('this is a test yo zombie killas', movieList)
+        //store returned data in state
+        // const movieListData = movieList.val()
+        //     for(let itemKey in movieListData) {
+
+        //  }
+            this.setState({
+                movies: movieList.results
+
+            });
+                console.log(this.setState)
+        });
+    }
+
+    
+    render() {
+
+        return (
+            <div>
+                <div className="ZombieList">
+                    <h1> ZombieLand </h1>
+                    <div className="ZombieParagraphs">
+                    <p>Deck of cards: While away the time playing with survivors</p>
+                    <p>Cast-iron skillet: Cooking tool and tool to neutralize zombies</p>
+                    <p>Shelter: Look for any items (garbage, bags, etc) that you can stitch together to turn into a house</p>
+                   
+                <button className="ZombieButton" onClick={this.onClick.bind(this)}>I'm ready to kick zombie butt</button>{this.state.showZ && < ZombieForm / >}
+                   
+
+                {this.state.movies.map((movie) => { 
+                    return <p>{movie.original_title}</p>
+                })}
+
+                 </div>
+
+                <p></p>
+                </div> 
+            </div>  
+        )
+    }
+
+}
+
+
+//START OF NUCLEAR
+
 // 'NuclearList' section
 class NuclearList extends React.Component {
+      constructor() {
+    super();
+
+    this.state = {
+        movies: {},
+    }
+
+}
+
+   onClick(e){
+    e.preventDefault();
+    this.setState({showZ: !this.state.showZ})
+  }
+
+    componentDidMount() {
+            ajax({
+            url: 'https://api.themoviedb.org/3/search/movie',
+            method: 'GET',
+            dataType: 'jsonp',
+            data: {
+            api_key: apiKey,
+            language: "en-US",
+            sort_by: "popularity.desc",
+            include_adult: "false",
+            page: "1",
+            query: "alien"
+        }
+    }).then((movieList) => {
+        console.log('this is a test yo nuclear killas', movieList)
+        //store returned data in state
+            this.setState({
+                movies: movieList.results
+            });
+                    console.log(this.setState)
+        });
+    }
+
     render() {
         return (
             <div className="NuclearList">
                 <p>Gun: Find your grandma's rifle and get ready to fight off those zombies </p>
                 <p>Cloud watching: Pick an interestingly shaped one and ask everyone to say what they think it looks like </p>
                 <p>Shelter: Grab as many sticks as you can find and then turn them into pile that can support a shelter</p>
+                <button className="NuclearButton" onClick={this.onClick.bind(this)}>I'm ready to kick zombie butt</button>{this.state.showZ && < ZombieForm / >}
             </div>
+        
     )
 }
     
@@ -142,12 +279,27 @@ class NuclearList extends React.Component {
 
 //'AlienList' section
 class AlienList extends React.Component {
+    constructor() {
+    super();
+
+    this.state = {
+        movies: {},
+    }
+
+}
+
+   onClick(e){
+    e.preventDefault();
+    this.setState({showZ: !this.state.showZ})
+  }
+
     render() {
         return (
             <div className="AlienList">
                 <p>Gun: Find your grandma's rifle and get ready to fight off those zombies </p>
                 <p>Cloud watching: Pick an interestingly shaped one and ask everyone to say what they think it looks like </p>
                 <p>Shelter: Grab as many sticks as you can find and then turn them into pile that can support a shelter</p>
+                <button className="AlienButton" onClick={this.onClick.bind(this)}>I'm ready to kick alien butt</button>{this.state.showZ && < ZombieForm />}
             </div>
         )
     }
@@ -157,11 +309,10 @@ class AlienList extends React.Component {
 
 
 ReactDOM.render(<Router history={browserHistory}>
- 
+    <Route path="/zombie" component={ZombieList}/>
+    <Route path="/nuclear" component={NuclearList} />
+    <Route path="/alien" component={AlienList} />
     <Route path="/" component={App}>
-        <Route path="/nuclear" component={NuclearList} />
-        <Route path="/alien" component={AlienList} />
-        <Route path="/zombie" component={ZombieList} />
         <Route path="/home" component={App} />
     </Route>
 </Router>, document.getElementById('app'))
@@ -172,3 +323,86 @@ ReactDOM.render(<Router history={browserHistory}>
 // 1. DISPLAYING RETURNED MOVIES ON THE PAGE
 // 2. LINKING PAGES TOGETHER USING REACT
 //INVESTIGATE: Firebase on youtube (for the web on react)
+// 3. //must find a way to get rid of uppercase Button problem.
+// 4.  // http://codepen.io/anon/pen/KzrzQZ?editors=1010
+
+
+
+//     handleClickZombie() {
+//         ajax({
+//         url: 'https://api.themoviedb.org/3/search/movie',
+//         method: 'GET',
+//         dataType: 'jsonp',
+//         data: {
+//             api_key: apiKey,
+//             language: "en-US",
+//             sort_by: "popularity.desc",
+//             include_adult: "false",
+//             page: "1",
+//             query: "zombie"
+//         }
+//     }).then((movieList) => {
+//         console.log('yo, this is the new clicks for the zombie data', movieList);
+//             this.setState({
+//                 movies: movieList.results
+//             });
+//     });
+
+// }
+
+
+// Button section
+// class Button extends React.Component {
+
+//      handleClickNuclear() {
+//        ajax({
+//         url: 'https://api.themoviedb.org/3/search/movie',
+//         method: 'GET',
+//         dataType: 'jsonp',
+//         data: {
+//             api_key: apiKey,
+//             language: "en-US",
+//             sort_by: "popularity.desc",
+//             include_adult: "false",
+//             page: "1",
+//             query: "nuclear"
+//         }
+//         }).then((movieList) => {
+//             console.log('yo, this is the new clicks for the nuclear list', movieList);
+//             this.setState({
+//                 movie: movieList.results
+//             });
+//         });
+//     }
+    
+
+//     handleClickAlien() {
+//       ajax({
+//         url: 'https://api.themoviedb.org/3/search/movie',
+//         method: 'GET',
+//         dataType: 'jsonp',
+//         data: {
+//             api_key: apiKey,
+//             language: "en-US",
+//             sort_by: "popularity.desc",
+//             include_adult: "false",
+//             page: "1",
+//             query: "alien"
+//         }
+//     }).then((movieList) => {
+//         console.log('yo, this is the new clicks for the alien list', movieList);
+//         this.setState({
+//                 movie: movieList.results
+//             });
+
+//             });
+//         }
+    
+//     render() {
+//         return (
+//             <div>
+              
+//             </div>
+//         )
+//     }
+// }

@@ -40,21 +40,14 @@ label {
 body {
   margin: 0; }
 
-.ZombieList {
-  height: 100vh;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+h1 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: orange; }
+  text-align: center; }
 
 .NuclearList {
   height: 100vh;
@@ -67,9 +60,6 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   background-color: pink; }
 
 .AlienList {
@@ -80,13 +70,76 @@ body {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  font-size: 20px;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   background-color: lightblue; }
+
+.ZombieList {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: orange;
+  padding: 10px 20px;
+  font-size: 20px; }
+
+.zombieAnimated {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.zombieList {
+  text-align: left; }
+
+.zombieAnimated img {
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.ZombieButton {
+  padding: 15px 15px;
+  border: 2px solid black;
+  background-color: white;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+
+.AlienList {
+  text-align: left; }
+
+.NuclearButton {
+  padding: 15px 15px;
+  border: 2px solid black;
+  background-color: white;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+
+.monster {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; }
+
+.isHit {
+  -webkit-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  transform: translateX(-50px); }
 
 html {
   font-size: 62.5%; }
