@@ -37188,7 +37188,8 @@ var App = function (_React$Component) {
 
     return App;
 }(_react2.default.Component);
-
+// <img src="../src/images/alien_logo.png"> 
+// https://codepen.io/chris22smith/pen/MyBBOe
 // Survival section
 
 
@@ -37267,24 +37268,32 @@ var Survival = function (_React$Component2) {
     return Survival;
 }(_react2.default.Component);
 
-// class alienForm extends React.Component {
-//   constructor() {
-//     super()
-//   }
-//   render(){
-//     return(
-//     <div className="alienAnimated">
-//        <Monster image="../src/images/alien.png" health={10} />
-//     </div>
-//     )
-//   }
-// }
+var NuclearForm = function (_React$Component3) {
+    _inherits(NuclearForm, _React$Component3);
 
-//START OF ZOMBIE STUFF
+    function NuclearForm() {
+        _classCallCheck(this, NuclearForm);
 
+        return _possibleConstructorReturn(this, (NuclearForm.__proto__ || Object.getPrototypeOf(NuclearForm)).call(this));
+    }
 
-var AlienForm = function (_React$Component3) {
-    _inherits(AlienForm, _React$Component3);
+    _createClass(NuclearForm, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'alienAnimated' },
+                _react2.default.createElement(Monster, { image: '../src/images/zombie2.png', health: 5 }),
+                _react2.default.createElement(Monster, { image: '../src/images/alien.png', health: 10 })
+            );
+        }
+    }]);
+
+    return NuclearForm;
+}(_react2.default.Component);
+
+var AlienForm = function (_React$Component4) {
+    _inherits(AlienForm, _React$Component4);
 
     function AlienForm() {
         _classCallCheck(this, AlienForm);
@@ -37307,8 +37316,8 @@ var AlienForm = function (_React$Component3) {
     return AlienForm;
 }(_react2.default.Component);
 
-var ZombieForm = function (_React$Component4) {
-    _inherits(ZombieForm, _React$Component4);
+var ZombieForm = function (_React$Component5) {
+    _inherits(ZombieForm, _React$Component5);
 
     function ZombieForm() {
         _classCallCheck(this, ZombieForm);
@@ -37322,8 +37331,8 @@ var ZombieForm = function (_React$Component4) {
             return _react2.default.createElement(
                 'div',
                 { className: 'zombieAnimated' },
-                _react2.default.createElement(Monster, { image: '../src/images/zombie2.png', health: 5, name: 'Zombie' }),
-                _react2.default.createElement(Monster, { image: '../src/images/alien.png', health: 10, name: '' })
+                _react2.default.createElement(Monster, { image: '../src/images/zombie2.png', className: '1', health: 5, name: 'Zombie' }),
+                _react2.default.createElement(Monster, { image: '../src/images/alien.png', className: '2', health: 10, name: 'Alien' })
             );
         }
     }]);
@@ -37331,26 +37340,26 @@ var ZombieForm = function (_React$Component4) {
     return ZombieForm;
 }(_react2.default.Component);
 
-var Monster = function (_React$Component5) {
-    _inherits(Monster, _React$Component5);
+var Monster = function (_React$Component6) {
+    _inherits(Monster, _React$Component6);
 
     function Monster() {
         _classCallCheck(this, Monster);
 
-        var _this5 = _possibleConstructorReturn(this, (Monster.__proto__ || Object.getPrototypeOf(Monster)).call(this));
+        var _this6 = _possibleConstructorReturn(this, (Monster.__proto__ || Object.getPrototypeOf(Monster)).call(this));
 
-        _this5.state = {
+        _this6.state = {
             health: 3,
             image: "../src/images/zombie2.png"
         };
-        _this5.takeDamage = _this5.takeDamage.bind(_this5);
-        return _this5;
+        _this6.takeDamage = _this6.takeDamage.bind(_this6);
+        return _this6;
     }
 
     _createClass(Monster, [{
         key: 'takeDamage',
         value: function takeDamage() {
-            var _this6 = this;
+            var _this7 = this;
 
             var health = this.state.health;
             var newHealth = health - 1;
@@ -37361,18 +37370,18 @@ var Monster = function (_React$Component5) {
 
             this.monster.classList.add('isHit');
             setTimeout(function () {
-                _this6.monster.classList.remove('isHit');
+                _this7.monster.classList.remove('isHit');
             }, 300);
         }
     }, {
         key: 'render',
         value: function render() {
-            var _this7 = this;
+            var _this8 = this;
 
             return _react2.default.createElement(
                 'div',
                 { className: 'monster', ref: function ref(element) {
-                        _this7.monster = element;
+                        _this8.monster = element;
                     } },
                 this.state.health === 0 ? _react2.default.createElement(
                     'span',
@@ -37394,6 +37403,8 @@ var Monster = function (_React$Component5) {
                 health: this.props.health,
                 image: this.props.image
             });
+
+            // setMonster(this.monster);
         }
     }]);
 
@@ -37403,19 +37414,19 @@ var Monster = function (_React$Component5) {
 // 'ZombieList' section
 
 
-var ZombieList = function (_React$Component6) {
-    _inherits(ZombieList, _React$Component6);
+var ZombieList = function (_React$Component7) {
+    _inherits(ZombieList, _React$Component7);
 
     function ZombieList() {
         _classCallCheck(this, ZombieList);
 
-        var _this8 = _possibleConstructorReturn(this, (ZombieList.__proto__ || Object.getPrototypeOf(ZombieList)).call(this));
+        var _this9 = _possibleConstructorReturn(this, (ZombieList.__proto__ || Object.getPrototypeOf(ZombieList)).call(this));
 
-        _this8.state = {
+        _this9.state = {
             movies: []
         };
 
-        return _this8;
+        return _this9;
     }
 
     _createClass(ZombieList, [{
@@ -37427,7 +37438,7 @@ var ZombieList = function (_React$Component6) {
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var _this9 = this;
+            var _this10 = this;
 
             (0, _jquery.ajax)({
                 url: 'https://api.themoviedb.org/3/search/movie',
@@ -37443,66 +37454,69 @@ var ZombieList = function (_React$Component6) {
                 }
             }).then(function (movieList) {
                 console.log('this is a test yo zombie killas', movieList);
-                //store returned data in state
-                // const movieListData = movieList.val()
-                //     for(let itemKey in movieListData) {
-
-                //  }
-                _this9.setState({
-                    movies: movieList.results
-
+                _this10.setState({
+                    movies: movieList.results.splice(3, 5)
                 });
-                console.log(_this9.setState);
+                console.log(_this10.setState);
             });
         }
     }, {
         key: 'render',
         value: function render() {
-
             return _react2.default.createElement(
                 'div',
                 null,
                 _react2.default.createElement(
                     'div',
-                    { className: 'ZombieList' },
+                    { className: 'zombieSection' },
                     _react2.default.createElement(
                         'h1',
                         null,
-                        ' ZombieLand '
+                        ' Zombie Invasion '
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'ZombieParagraphs' },
+                        { className: 'ZombieList' },
                         _react2.default.createElement(
-                            'p',
-                            null,
-                            'Deck of cards: While away the time playing with survivors'
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            null,
-                            'Cast-iron skillet: Cooking tool and tool to neutralize zombies'
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            null,
-                            'Shelter: Look for any items (garbage, bags, etc) that you can stitch together to turn into a house'
-                        ),
-                        _react2.default.createElement(
-                            'button',
-                            { className: 'ZombieButton', onClick: this.onClick.bind(this) },
-                            'I\'m ready to kick zombie butt'
-                        ),
-                        this.state.showZ && _react2.default.createElement(ZombieForm, null),
-                        this.state.movies.map(function (movie) {
-                            return _react2.default.createElement(
+                            'div',
+                            { className: 'zombieWrapper' },
+                            _react2.default.createElement(
                                 'p',
                                 null,
-                                movie.original_title
-                            );
-                        })
+                                'Deck of cards: While away the time playing with survivors'
+                            ),
+                            _react2.default.createElement(
+                                'p',
+                                null,
+                                'Cast-iron skillet: Cooking tool and tool to neutralize zombies'
+                            ),
+                            _react2.default.createElement(
+                                'p',
+                                null,
+                                'Shelter: Look for any items (garbage, bags, etc) that you can stitch together to turn into a house'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'zombieWrapper2' },
+                            this.state.movies.map(function (movie) {
+                                return _react2.default.createElement(
+                                    'p',
+                                    null,
+                                    movie.original_title,
+                                    ', ',
+                                    movie.overview
+                                );
+                            })
+                        ),
+                        _react2.default.createElement('div', null)
                     ),
-                    _react2.default.createElement('p', null)
+                    _react2.default.createElement(
+                        'button',
+                        { className: 'ZombieButton', onClick: this.onClick.bind(this) },
+                        'I\'m ready to kick zombie butt'
+                    ),
+                    this.state.showZ && _react2.default.createElement(ZombieForm, null)
                 )
             );
         }
@@ -37516,19 +37530,19 @@ var ZombieList = function (_React$Component6) {
 // 'NuclearList' section
 
 
-var NuclearList = function (_React$Component7) {
-    _inherits(NuclearList, _React$Component7);
+var NuclearList = function (_React$Component8) {
+    _inherits(NuclearList, _React$Component8);
 
     function NuclearList() {
         _classCallCheck(this, NuclearList);
 
-        var _this10 = _possibleConstructorReturn(this, (NuclearList.__proto__ || Object.getPrototypeOf(NuclearList)).call(this));
+        var _this11 = _possibleConstructorReturn(this, (NuclearList.__proto__ || Object.getPrototypeOf(NuclearList)).call(this));
 
-        _this10.state = {
+        _this11.state = {
             movies: {}
         };
 
-        return _this10;
+        return _this11;
     }
 
     _createClass(NuclearList, [{
@@ -37540,7 +37554,7 @@ var NuclearList = function (_React$Component7) {
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var _this11 = this;
+            var _this12 = this;
 
             (0, _jquery.ajax)({
                 url: 'https://api.themoviedb.org/3/search/movie',
@@ -37557,10 +37571,10 @@ var NuclearList = function (_React$Component7) {
             }).then(function (movieList) {
                 console.log('this is a test yo nuclear killas', movieList);
                 //store returned data in state
-                _this11.setState({
+                _this12.setState({
                     movies: movieList.results
                 });
-                console.log(_this11.setState);
+                console.log(_this12.setState);
             });
         }
     }, {
@@ -37568,29 +37582,41 @@ var NuclearList = function (_React$Component7) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: 'NuclearList' },
+                { className: 'nuclearList' },
                 _react2.default.createElement(
-                    'p',
+                    'h1',
                     null,
-                    'Gun: Find your grandma\'s rifle and get ready to fight off those zombies '
+                    ' Nuclear Showdown '
                 ),
                 _react2.default.createElement(
-                    'p',
-                    null,
-                    'Cloud watching: Pick an interestingly shaped one and ask everyone to say what they think it looks like '
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    'Shelter: Grab as many sticks as you can find and then turn them into pile that can support a shelter'
+                    'div',
+                    { className: 'nuclearParagraphs' },
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        'Gun: Find your grandma\'s rifle and get ready to fight off those zombies '
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        'Cloud watching: Pick an interestingly shaped one and ask everyone to say what they think it looks like '
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        'Shelter: Grab as many sticks as you can find and then turn them into pile that can support a shelter'
+                    )
                 ),
                 _react2.default.createElement(
                     'button',
-                    { className: 'NuclearButton', onClick: this.onClick.bind(this) },
+                    { className: 'nuclearButton', onClick: this.onClick.bind(this) },
                     'I\'m ready to kick zombie butt'
                 ),
-                this.state.showZ && _react2.default.createElement(ZombieForm, null)
-            );
+                this.state.showZ && _react2.default.createElement(NuclearForm, null)
+            )
+            // </div>
+
+            ;
         }
     }]);
 
@@ -37601,19 +37627,19 @@ var NuclearList = function (_React$Component7) {
 //'AlienList' section
 
 
-var AlienList = function (_React$Component8) {
-    _inherits(AlienList, _React$Component8);
+var AlienList = function (_React$Component9) {
+    _inherits(AlienList, _React$Component9);
 
     function AlienList() {
         _classCallCheck(this, AlienList);
 
-        var _this12 = _possibleConstructorReturn(this, (AlienList.__proto__ || Object.getPrototypeOf(AlienList)).call(this));
+        var _this13 = _possibleConstructorReturn(this, (AlienList.__proto__ || Object.getPrototypeOf(AlienList)).call(this));
 
-        _this12.state = {
+        _this13.state = {
             movies: {}
         };
 
-        return _this12;
+        return _this13;
     }
 
     _createClass(AlienList, [{
@@ -37628,6 +37654,11 @@ var AlienList = function (_React$Component8) {
             return _react2.default.createElement(
                 'div',
                 { className: 'AlienList' },
+                _react2.default.createElement(
+                    'h1',
+                    null,
+                    ' Alien Invasion '
+                ),
                 _react2.default.createElement(
                     'p',
                     null,
@@ -37648,7 +37679,7 @@ var AlienList = function (_React$Component8) {
                     { className: 'AlienButton', onClick: this.onClick.bind(this) },
                     'I\'m ready to kick alien butt'
                 ),
-                this.state.showZ && _react2.default.createElement(ZombieForm, null)
+                this.state.showZ && _react2.default.createElement(AlienForm, null)
             );
         }
     }]);

@@ -31,7 +31,8 @@ class App extends React.Component {
         )
     }
 }
-
+// <img src="../src/images/alien_logo.png"> 
+// https://codepen.io/chris22smith/pen/MyBBOe
 // Survival section
 class Survival extends React.Component {
     render() {
@@ -42,8 +43,9 @@ class Survival extends React.Component {
                     <p>The all-you-need-to-know guide to survive the end of the world</p>
                       <Link to="/zombie"><button className="zombie">ZOMBIE</button></Link>
                  {this.props.children}
+
                 <Link to="/nuclear"><button className="nuclear" onClick={this.handleClickNuclear}>NUCLEAR SHOWDOWN</button></Link>
-                 {this.props.children}
+                 {this.props.children} 
                 <Link to="/alien"><button className="alien" onClick={this.handleClickAlien}>ALIEN INVASION</button></Link>
                  {this.props.children}
                 </div>
@@ -55,20 +57,21 @@ class Survival extends React.Component {
     }
 }
 
-// class alienForm extends React.Component {
-//   constructor() {
-//     super()
-//   }
-//   render(){
-//     return(
-//     <div className="alienAnimated">
-//        <Monster image="../src/images/alien.png" health={10} />
-//     </div>
-//     )
-//   }
-// }
+class NuclearForm extends React.Component {
+      constructor() {
+        super();
+      }
+      render(){
+        return(
+            <div className="alienAnimated">
+                <Monster image="../src/images/zombie2.png" health={5} />
+                <Monster image="../src/images/alien.png" health={10} />
+            </div>
+        )
+    }
 
-//START OF ZOMBIE STUFF
+}
+
 class AlienForm extends React.Component {
       constructor() {
         super();
@@ -92,8 +95,8 @@ class ZombieForm extends React.Component {
       render(){
         return(
             <div className="zombieAnimated">
-                <Monster image="../src/images/zombie2.png" health={5} name="Zombie"/>
-                <Monster image="../src/images/alien.png" health={10} name=""/>
+                <Monster image="../src/images/zombie2.png" className="1" health={5} name="Zombie"/>
+                <Monster image="../src/images/alien.png" className="2" health={10} name="Alien"/>
             </div>
         )
     }
@@ -127,7 +130,7 @@ class Monster extends React.Component {
 
     render() {
         return (
-            <div className="monster" ref={element => { this.monster = element; }}>
+            <div className="monster" ref={element => {this.monster = element; }}>
                 {this.state.health === 0 ?
                     <span>{this.props.name} Dead</span>
                 :
@@ -143,6 +146,7 @@ class Monster extends React.Component {
             image: this.props.image
         });
 
+        // setMonster(this.monster);
     }
 }
 
@@ -178,43 +182,38 @@ class ZombieList extends React.Component {
         }
     }).then((movieList) => {
         console.log('this is a test yo zombie killas', movieList)
-        //store returned data in state
-        // const movieListData = movieList.val()
-        //     for(let itemKey in movieListData) {
-
-        //  }
             this.setState({
-                movies: movieList.results
-
+                movies: movieList.results.splice(3, 5)
             });
                 console.log(this.setState)
         });
     }
-
     
     render() {
-
         return (
             <div>
+            <div className="zombieSection">
+                 <h1> Zombie Invasion </h1>
                 <div className="ZombieList">
-                    <h1> ZombieLand </h1>
-                    <div className="ZombieParagraphs">
-                    <p>Deck of cards: While away the time playing with survivors</p>
-                    <p>Cast-iron skillet: Cooking tool and tool to neutralize zombies</p>
-                    <p>Shelter: Look for any items (garbage, bags, etc) that you can stitch together to turn into a house</p>
-                   
-                <button className="ZombieButton" onClick={this.onClick.bind(this)}>I'm ready to kick zombie butt</button>{this.state.showZ && < ZombieForm / >}
-                   
-
-                {this.state.movies.map((movie) => { 
-                    return <p>{movie.original_title}</p>
-                })}
-
-                 </div>
-
-                <p></p>
-                </div> 
-            </div>  
+                    <div className="zombieWrapper">
+                        <p>Deck of cards: While away the time playing with survivors</p>
+                        <p>Cast-iron skillet: Cooking tool and tool to neutralize zombies</p>
+                        <p>Shelter: Look for any items (garbage, bags, etc) that you can stitch together to turn into a house</p>
+                    </div>
+                    <div className="zombieWrapper2">
+                        {this.state.movies.map((movie) => { 
+                        return <p>{movie.original_title}, {movie.overview}</p>
+                
+                    })}
+                    </div>
+                    <div>
+                    </div>
+                     </div>
+                     <button className="ZombieButton" onClick={this.onClick.bind(this)}>I'm ready to kick zombie butt</button>{this.state.showZ && < ZombieForm / >}
+                </div>
+                           
+            </div>
+             
         )
     }
 
@@ -233,7 +232,6 @@ class NuclearList extends React.Component {
     }
 
 }
-
    onClick(e){
     e.preventDefault();
     this.setState({showZ: !this.state.showZ})
@@ -264,15 +262,21 @@ class NuclearList extends React.Component {
 
     render() {
         return (
-            <div className="NuclearList">
+            <div className="nuclearList">
+            <h1> Nuclear Showdown </h1>
+            <div className="nuclearParagraphs">
                 <p>Gun: Find your grandma's rifle and get ready to fight off those zombies </p>
                 <p>Cloud watching: Pick an interestingly shaped one and ask everyone to say what they think it looks like </p>
                 <p>Shelter: Grab as many sticks as you can find and then turn them into pile that can support a shelter</p>
-                <button className="NuclearButton" onClick={this.onClick.bind(this)}>I'm ready to kick zombie butt</button>{this.state.showZ && < ZombieForm / >}
             </div>
+               
+
+            <button className="nuclearButton" onClick={this.onClick.bind(this)}>I'm ready to kick zombie butt</button>{this.state.showZ && < NuclearForm / >}
+            </div>
+            // </div>
         
-    )
-}
+        )
+    }
     
 }
 // End of 'NuclearList' section
@@ -287,7 +291,6 @@ class AlienList extends React.Component {
     }
 
 }
-
    onClick(e){
     e.preventDefault();
     this.setState({showZ: !this.state.showZ})
@@ -296,10 +299,11 @@ class AlienList extends React.Component {
     render() {
         return (
             <div className="AlienList">
-                <p>Gun: Find your grandma's rifle and get ready to fight off those zombies </p>
-                <p>Cloud watching: Pick an interestingly shaped one and ask everyone to say what they think it looks like </p>
-                <p>Shelter: Grab as many sticks as you can find and then turn them into pile that can support a shelter</p>
-                <button className="AlienButton" onClick={this.onClick.bind(this)}>I'm ready to kick alien butt</button>{this.state.showZ && < ZombieForm />}
+            <h1> Alien Invasion </h1>
+            <p>Gun: Find your grandma's rifle and get ready to fight off those zombies </p>
+            <p>Cloud watching: Pick an interestingly shaped one and ask everyone to say what they think it looks like </p>
+            <p>Shelter: Grab as many sticks as you can find and then turn them into pile that can support a shelter</p>
+            <button className="AlienButton" onClick={this.onClick.bind(this)}>I'm ready to kick alien butt</button>{this.state.showZ && < AlienForm />}
             </div>
         )
     }

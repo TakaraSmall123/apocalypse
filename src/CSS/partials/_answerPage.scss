@@ -1,20 +1,66 @@
 @import 'partials/variables';
 
-h1{
 
-flex-direction: column;
-justify-content: center;
-text-align: center;
+//ZOMBIE SECTION
+
+.zombieSection{
+height: 100vh;
+background-color: orange;
+padding-top: 20px;
+// text-align: center
+}
+
+.zombieSection {
+
 
 }
 
-.NuclearList{	
-	height: 100vh;
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: pink;
- }
+.zombieSection h1 {
+text-align: center;
+font-size: 60px;
+font-family: $titleFontFamily;
+}
+
+.ZombieList{
+width: 100%;
+display: flex;
+flex-direction: row;
+margin: auto;
+padding:20px;
+}
+
+.zombieWrapper{
+display:flex;
+flex-direction:column;
+width: 100%;
+// margin-right: 30px;
+}
+
+
+.zombieWrapper2 {
+display:flex;
+flex-direction:column;
+}
+
+.ZombieButton {
+padding: 15px 15px;
+border: 2px solid black;
+background-color: white;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+
+//ALIEN SECTION
+
+.AlienList{
+    text-align: left;
+}
+
+.AlienList h1 {
+font-family: $titleFontFamily;
+font-size:60px;
+}
 
  .AlienList{  
     height: 100vh;
@@ -27,32 +73,10 @@ text-align: center;
  }
 
 
-//zombie
-.ZombieList{
-height: 100vh;
-display: flex;
-flex-direction: column;
-// justify-content: center;
-background-color: orange;
-padding: 10px 20px;
-font-size: 20px;
-}
 
+//NUCLEAR SECTION
 
-.zombieAnimated{
-display: flex;
-// border: 2px solid black;
-}
-
-.zombieList{
-    text-align: left;
-}
-
-.zombieAnimated img {
-    align-items: flex-start; 
-}
-
-.ZombieButton {
+.nuclearButton {
 padding: 15px 15px;
 border: 2px solid black;
 background-color: white;
@@ -61,27 +85,42 @@ justify-content: center;
 text-align: center;
 }
 
-//ALIEN LIST
+.nuclearList{   
+    height: 100vh;
+    background-color: pink;
+    margin:0;
+ }
 
-.AlienList{
-    text-align: left;
+.nuclearList h1 {
+    margin-top: 0;
+    padding-top:50px;
+    text-align: center;
+    font-size: 80px;
+    font-family: $titleFontFamily;
 }
 
+.nuclearList {
+    .monster  {
+        border: 2px solid red;
+        flex-direction: row;
+    }
+}
 
-.NuclearButton {
-padding: 15px 15px;
-border: 2px solid black;
-background-color: white;
-flex-direction: column;
-justify-content: center;
-text-align: center;
-
+.nuclearParagraphs {
+    border: 2px solid red;
 }
 
 .monster {
     transform: translateX(0);
     transition: transform 0.2s;
 }
+
+.monster img {
+        float:left;
+        width: 10%;
+        margin: auto;
+
+    }
 
 .isHit {
    transform: translateX(-50px);
