@@ -279,3 +279,5 @@
 // 1. DISPLAYING RETURNED MOVIES ON THE PAGE
 // 2. LINKING PAGES TOGETHER USING REACT
 //INVESTIGATE: Firebase on youtube (for the web on react)
+
+// https://www.npmjs.com/package/react-hover

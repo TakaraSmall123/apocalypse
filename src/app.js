@@ -31,8 +31,7 @@ class App extends React.Component {
         )
     }
 }
-// <img src="../src/images/alien_logo.png"> 
-// https://codepen.io/chris22smith/pen/MyBBOe
+
 // Survival section
 class Survival extends React.Component {
     render() {
@@ -40,13 +39,16 @@ class Survival extends React.Component {
             <div className="titlePageIntro">
                 <div className="titlePageDescription">
                     <h1>Apocalypse Survival</h1>
-                    <p>The all-you-need-to-know guide to survive the end of the world</p>
-                      <Link to="/zombie"><button className="zombie">ZOMBIE</button></Link>
+                    <p>The all-you-need-to-know guide to survive the end of the world.
+                    </p>
+                     <p>Pick your scenario:</p>
+
+                      <Link to="/zombie"><button className="zombie">ZOMBIE <img src="../src/images/zombieLogo.png"/></button></Link>
                  {this.props.children}
 
-                <Link to="/nuclear"><button className="nuclear" onClick={this.handleClickNuclear}>NUCLEAR SHOWDOWN</button></Link>
+                <Link to="/nuclear"><button className="nuclear" onClick={this.handleClickNuclear}><img src="../src/images/rocketLogo.png"/>NUCLEAR SHOWDOWN</button></Link>
                  {this.props.children} 
-                <Link to="/alien"><button className="alien" onClick={this.handleClickAlien}>ALIEN INVASION</button></Link>
+                <Link to="/alien"><button className="alien" onClick={this.handleClickAlien}><img src="../src/images/alienLogo.png"/>ALIEN INVASION</button></Link>
                  {this.props.children}
                 </div>
                 <nav className="homePageIntro">
@@ -90,7 +92,6 @@ class AlienForm extends React.Component {
 class ZombieForm extends React.Component {
       constructor() {
         super();
-
       }
       render(){
         return(
@@ -122,6 +123,7 @@ class Monster extends React.Component {
         });
 
         this.monster.classList.add('isHit');
+
         setTimeout(() => {
             this.monster.classList.remove('isHit');
         }, 300);
@@ -151,15 +153,14 @@ class Monster extends React.Component {
 }
 
 
+
 // 'ZombieList' section
 class ZombieList extends React.Component {
   constructor() {
     super();
-
         this.state = {
             movies: [],
         }
-
     }
 
    onClick(e){
@@ -183,7 +184,7 @@ class ZombieList extends React.Component {
     }).then((movieList) => {
         console.log('this is a test yo zombie killas', movieList)
             this.setState({
-                movies: movieList.results.splice(3, 5)
+                movies: movieList.results.splice(3, 6)
             });
                 console.log(this.setState)
         });
@@ -196,24 +197,53 @@ class ZombieList extends React.Component {
                  <h1> Zombie Invasion </h1>
                 <div className="ZombieList">
                     <div className="zombieWrapper">
-                        <p>Deck of cards: While away the time playing with survivors</p>
-                        <p>Cast-iron skillet: Cooking tool and tool to neutralize zombies</p>
-                        <p>Shelter: Look for any items (garbage, bags, etc) that you can stitch together to turn into a house</p>
+                        <h2>1. Your must-have pack</h2>
+                        <div className="zombiePack">
+                        <h3>Deck of cards:</h3> <p>While away the time playing with survivors</p>
+                         <h3>Cast-iron skillet:</h3><p>Cooking tool and tool to neutralize zombies</p>
+                        <h3>Shelter:</h3><p>Look for any items (garbage, bags, etc) that you can stitch together to turn into a house</p>
+                        </div>
+                        <Link to="/fight"><button className="ZombieButton2">Are you ready to practice?</button></Link>
                     </div>
-                    <div className="zombieWrapper2">
+
+                        <div className="zombieWrapper2">
+                          <h2>2. Your must-see reference guide</h2>
                         {this.state.movies.map((movie) => { 
-                        return <p>{movie.original_title}, {movie.overview}</p>
-                
-                    })}
-                    </div>
+                        return <p className="movieListBox"> <img src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}/></p> 
+                        })}
+
+                        </div>
                     <div>
-                    </div>
-                     </div>
-                     <button className="ZombieButton" onClick={this.onClick.bind(this)}>I'm ready to kick zombie butt</button>{this.state.showZ && < ZombieForm / >}
+
                 </div>
-                           
+
             </div>
+        </div>
+                           
+    </div>
              
+        )
+    }
+
+}
+
+class ZombieFightList extends React.Component {
+  constructor() {
+    super();
+        this.state = {
+            movies: [],
+        }
+    }
+
+   onClick(e){
+    e.preventDefault();
+    this.setState({showZ: !this.state.showZ})
+  }
+  render() {
+        return (
+            <div className="zombieFightSection">
+            <button className="ZombieFightButton" onClick={this.onClick.bind(this)}>I'm ready to kick zombie butt</button>{this.state.showZ && < ZombieForm / >}
+            </div>
         )
     }
 
@@ -314,6 +344,9 @@ class AlienList extends React.Component {
 
 ReactDOM.render(<Router history={browserHistory}>
     <Route path="/zombie" component={ZombieList}/>
+        <Route path="/fight" component={ZombieFightList} >
+    </Route>
+    <Route path="/zombie" component={ZombieList}/>
     <Route path="/nuclear" component={NuclearList} />
     <Route path="/alien" component={AlienList} />
     <Route path="/" component={App}>
@@ -329,84 +362,4 @@ ReactDOM.render(<Router history={browserHistory}>
 //INVESTIGATE: Firebase on youtube (for the web on react)
 // 3. //must find a way to get rid of uppercase Button problem.
 // 4.  // http://codepen.io/anon/pen/KzrzQZ?editors=1010
-
-
-
-//     handleClickZombie() {
-//         ajax({
-//         url: 'https://api.themoviedb.org/3/search/movie',
-//         method: 'GET',
-//         dataType: 'jsonp',
-//         data: {
-//             api_key: apiKey,
-//             language: "en-US",
-//             sort_by: "popularity.desc",
-//             include_adult: "false",
-//             page: "1",
-//             query: "zombie"
-//         }
-//     }).then((movieList) => {
-//         console.log('yo, this is the new clicks for the zombie data', movieList);
-//             this.setState({
-//                 movies: movieList.results
-//             });
-//     });
-
-// }
-
-
-// Button section
-// class Button extends React.Component {
-
-//      handleClickNuclear() {
-//        ajax({
-//         url: 'https://api.themoviedb.org/3/search/movie',
-//         method: 'GET',
-//         dataType: 'jsonp',
-//         data: {
-//             api_key: apiKey,
-//             language: "en-US",
-//             sort_by: "popularity.desc",
-//             include_adult: "false",
-//             page: "1",
-//             query: "nuclear"
-//         }
-//         }).then((movieList) => {
-//             console.log('yo, this is the new clicks for the nuclear list', movieList);
-//             this.setState({
-//                 movie: movieList.results
-//             });
-//         });
-//     }
-    
-
-//     handleClickAlien() {
-//       ajax({
-//         url: 'https://api.themoviedb.org/3/search/movie',
-//         method: 'GET',
-//         dataType: 'jsonp',
-//         data: {
-//             api_key: apiKey,
-//             language: "en-US",
-//             sort_by: "popularity.desc",
-//             include_adult: "false",
-//             page: "1",
-//             query: "alien"
-//         }
-//     }).then((movieList) => {
-//         console.log('yo, this is the new clicks for the alien list', movieList);
-//         this.setState({
-//                 movie: movieList.results
-//             });
-
-//             });
-//         }
-    
-//     render() {
-//         return (
-//             <div>
-              
-//             </div>
-//         )
-//     }
-// }
+//5. Nopixel -rocket | TS Graphics
