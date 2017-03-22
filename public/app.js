@@ -37236,7 +37236,7 @@ var Survival = function (_React$Component2) {
                             _react2.default.createElement(
                                 'button',
                                 { className: 'zombie' },
-                                _react2.default.createElement('img', { src: '../src/images/zombieLogo.png' }),
+                                _react2.default.createElement('img', { src: '../src/images/zombieLogo.png', className: 'titleImageZombie' }),
                                 'ZOMBIE '
                             )
                         ),
@@ -37247,7 +37247,7 @@ var Survival = function (_React$Component2) {
                             _react2.default.createElement(
                                 'button',
                                 { className: 'nuclear', onClick: this.handleClickNuclear },
-                                _react2.default.createElement('img', { src: '../src/images/rocketLogo.png' }),
+                                _react2.default.createElement('img', { src: '../src/images/rocketLogo.png', className: 'titleImage' }),
                                 'NUCLEAR SHOWDOWN'
                             )
                         ),
@@ -37258,7 +37258,7 @@ var Survival = function (_React$Component2) {
                             _react2.default.createElement(
                                 'button',
                                 { className: 'alien', onClick: this.handleClickAlien },
-                                _react2.default.createElement('img', { src: '../src/images/alienLogo.png' }),
+                                _react2.default.createElement('img', { src: '../src/images/alienLogo.png', className: 'titleImage' }),
                                 'ALIEN INVASION'
                             )
                         ),
@@ -37313,9 +37313,9 @@ var NuclearForm = function (_React$Component3) {
                     { className: 'fightBorder' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'alienAnimated' },
-                        _react2.default.createElement(Monster, { image: '../src/images/zombie2.png', health: 5 }),
-                        _react2.default.createElement(Monster, { image: '../src/images/alien.png', health: 10 })
+                        { className: 'zombieAnimated' },
+                        _react2.default.createElement(Monster, { image: '../src/images/rockets.png', health: 5, name: 'Rocket' }),
+                        _react2.default.createElement(Monster, { image: '../src/images/TKFight.png', health: 10, name: 'Takara' })
                     )
                 )
             );
@@ -37351,9 +37351,9 @@ var AlienForm = function (_React$Component4) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: 'alienAnimated' },
-                    _react2.default.createElement(Monster, { image: '../src/images/zombie2.png', health: 5 }),
-                    _react2.default.createElement(Monster, { image: '../src/images/alien.png', health: 10 })
+                    { className: 'zombieAnimated' },
+                    _react2.default.createElement(Monster, { image: '../src/images/alienFight.png', health: 5, name: 'Alien' }),
+                    _react2.default.createElement(Monster, { image: '../src/images/TKFight.png', health: 10, name: 'Takara' })
                 )
             );
         }
@@ -37389,8 +37389,8 @@ var ZombieForm = function (_React$Component5) {
                 _react2.default.createElement(
                     'div',
                     { className: 'zombieAnimated' },
-                    _react2.default.createElement(Monster, { image: '../src/images/zombie2.png', className: 'zombAnimated', health: 5, name: 'Zombie' }),
-                    _react2.default.createElement(Monster, { image: '../src/images/TK2.png', className: 'girlAnimated', health: 10, name: 'Alien' })
+                    _react2.default.createElement(Monster, { image: '../src/images/zombieFight.png', className: 'zombAnimated', health: 5, name: 'Zombie' }),
+                    _react2.default.createElement(Monster, { image: '../src/images/TKFight.png', className: 'girlAnimated', health: 10, name: 'Takara' })
                 )
             );
         }
@@ -37448,14 +37448,22 @@ var Monster = function (_React$Component6) {
                     } },
                 this.state.health === 0 ? _react2.default.createElement(
                     'span',
-                    null,
+                    { className: 'congrats' },
+                    'Congrats! The ',
                     this.props.name,
-                    ' Dead'
+                    ' is dead '
                 ) : _react2.default.createElement('img', { src: this.state.image, onClick: this.takeDamage }),
                 _react2.default.createElement(
                     'p',
                     null,
-                    this.state.health
+                    ' ',
+                    this.props.name,
+                    '\'s health: ',
+                    _react2.default.createElement(
+                        'span',
+                        null,
+                        this.state.health
+                    )
                 )
             );
         }
@@ -37932,7 +37940,7 @@ var AlienFightList = function (_React$Component11) {
                         { className: 'alienFightButton', onClick: this.onClick.bind(this) },
                         'Click on the bad guy to win!'
                     ),
-                    this.state.showZ && _react2.default.createElement(NuclearForm, null)
+                    this.state.showZ && _react2.default.createElement(AlienForm, null)
                 )
             );
         }

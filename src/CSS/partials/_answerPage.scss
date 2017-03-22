@@ -40,7 +40,7 @@ margin-top:30px;
 flex-direction:column;
 width: 100%;
 justify-content:center;
-padding:0px 20px 0px 20px;
+padding:50px 20px 50px 20px;
 font-family: $bodyFontFamily;
 background-color: lightpink;
 margin-left: 10px;
@@ -61,6 +61,7 @@ border-radius: 5px;
     background-color: #ff5050;
     padding:2px;
     border-radius: 2px;
+    font-size: 1.6rem;
 }
 
 .zombiePack p{
@@ -76,6 +77,7 @@ background-color: lightpink;
 margin-left: 10px;
 margin-right: 10px;
 border-radius: 5px;
+padding:50px 20px 50px 20px;
 
     img {
     display: flex;
@@ -94,7 +96,8 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 width:40%;
-margin:auto
+margin:auto;
+
 }
 
 //NUCLEAR SECTION
@@ -132,7 +135,7 @@ margin-top:30px;
 flex-direction:column;
 width: 100%;
 justify-content:center;
-padding:0px 20px 0px 20px;
+padding: 50px 20px 50px 20px;
 font-family: $bodyFontFamily;
 background-color: lightblue;
 margin-left: 10px;
@@ -150,7 +153,7 @@ border-radius: 5px;
 
 .nuclearPack span {
     font-weight: bolder;
-    font-size:2rem;
+    font-size: 1.6rem;
     background-color: #ff5050;
     padding:2px;
     border-radius: 2px;
@@ -168,6 +171,7 @@ background-color: lightblue;
 margin-left: 10px;
 margin-right: 10px;
 border-radius: 5px;
+padding: 50px 20px 50px 20px;
 
     img {
     display: flex;
@@ -212,7 +216,7 @@ margin-top:30px;
 flex-direction:column;
 width: 100%;
 justify-content:center;
-padding:0px 20px 0px 20px;
+padding: 50px 20px 50px 20px;
 font-family: $bodyFontFamily;
 background-color: orange;
 margin-left: 10px;
@@ -230,7 +234,7 @@ border-radius: 5px;
 
 .alienPack span {
     font-weight: bolder;
-    font-size:2rem;
+    font-size:1.6rem;
     background-color: #ff5050;
     padding:2px;
     border-radius: 2px;
@@ -243,6 +247,7 @@ border-radius: 5px;
 .alienWrapper2 {
 width:100%;
 text-align:center;
+padding: 50px 20px 50px 20px;
 font-weight:bold;
 background-color: orange;
 margin-left: 10px;
@@ -285,17 +290,46 @@ border-radius: 5px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width:40%;
+    font-weight: bold;
 
 }
 
 .monster img{
-    border: 2px solid green;
-    width:20%;
+    // border: 2px solid green;
+    width:100%;
+    padding-top:20px;
+}
+
+.monster p{
+    position: absolute;
+    top:0;
+    padding-top:10px;
+}
+.monster span{
+    padding-right:2px;
+    font-weight: bold;
+}
+
+.isHit {
+   transform: translateX(-50px);
+ 
 }
 
 .isHit {
    transform: translateX(-50px);
    color:red;
+}
+
+.congrats {
+    @keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
 }
 
 .movieListBox {

@@ -44,12 +44,12 @@ class Survival extends React.Component {
                     </p>
                      <p>Pick your scenario:</p>
                      <div className="buttonHolder">
-                      <Link to="/zombie"><button className="zombie"><img src="../src/images/zombieLogo.png"/>ZOMBIE </button></Link>
+                      <Link to="/zombie"><button className="zombie"><img src="../src/images/zombieLogo.png" className="titleImageZombie"/>ZOMBIE </button></Link>
                  {this.props.children}
 
-                <Link to="/nuclear"><button className="nuclear" onClick={this.handleClickNuclear}><img src="../src/images/rocketLogo.png"/>NUCLEAR SHOWDOWN</button></Link>
+                <Link to="/nuclear"><button className="nuclear" onClick={this.handleClickNuclear}><img src="../src/images/rocketLogo.png" className="titleImage"/>NUCLEAR SHOWDOWN</button></Link>
                  {this.props.children} 
-                <Link to="/alien"><button className="alien" onClick={this.handleClickAlien}><img src="../src/images/alienLogo.png"/>ALIEN INVASION</button></Link>
+                <Link to="/alien"><button className="alien" onClick={this.handleClickAlien}><img src="../src/images/alienLogo.png" className="titleImage"/>ALIEN INVASION</button></Link>
                  {this.props.children}
                  </div>
                 </div>
@@ -73,9 +73,9 @@ class NuclearForm extends React.Component {
                     <Link to="/">Home</Link>
                 </nav> 
                 <div className="fightBorder">
-                    <div className="alienAnimated">
-                        <Monster image="../src/images/zombie2.png" health={5} />
-                        <Monster image="../src/images/alien.png" health={10} />
+                    <div className="zombieAnimated">
+                        <Monster image="../src/images/rockets.png" health={5} name="Rocket"/>
+                        <Monster image="../src/images/TKFight.png" health={10} name="Takara"/>
                     </div>
                 </div>
             </div>
@@ -94,9 +94,9 @@ class AlienForm extends React.Component {
                 <nav className="homePageIntro">
                     <Link to="/">Home</Link>
                 </nav> 
-                <div className="alienAnimated">
-                    <Monster image="../src/images/zombie2.png" health={5} />
-                    <Monster image="../src/images/alien.png" health={10} />
+                <div className="zombieAnimated">
+                    <Monster image="../src/images/alienFight.png" health={5} name="Alien" />
+                    <Monster image="../src/images/TKFight.png" health={10} name="Takara" />
                 </div>
             </div>
         )
@@ -115,8 +115,8 @@ class ZombieForm extends React.Component {
                     <Link to="/">Home</Link>
                 </nav> 
                 <div className="zombieAnimated">
-                    <Monster image="../src/images/zombie2.png" className="zombAnimated" health={5} name="Zombie"/>
-                    <Monster image="../src/images/TK2.png" className="girlAnimated" health={10} name="Alien"/>
+                    <Monster image="../src/images/zombieFight.png" className="zombAnimated" health={5} name="Zombie"/>
+                    <Monster image="../src/images/TKFight.png" className="girlAnimated" health={10} name="Takara"/>
                 </div>
             </div>
         )
@@ -153,11 +153,11 @@ class Monster extends React.Component {
         return (
             <div className="monster" ref={element => {this.monster = element; }}>
                 {this.state.health === 0 ?
-                    <span>{this.props.name} Dead</span>
+                    <span className ="congrats">Congrats! The {this.props.name} is dead </span>
                 :
                     <img src={this.state.image} onClick={this.takeDamage} /> 
                 }
-                <p>{this.state.health}</p>
+                <p> {this.props.name}'s health: <span>{this.state.health}</span></p>
             </div>
         )
     }
@@ -386,7 +386,7 @@ class AlienFightList extends React.Component {
                 <Link to="/">Home</Link>
             </nav> 
             <div className="alienFightSection">
-            <button className="alienFightButton" onClick={this.onClick.bind(this)}>Click on the bad guy to win!</button>{this.state.showZ && < NuclearForm / >}
+            <button className="alienFightButton" onClick={this.onClick.bind(this)}>Click on the bad guy to win!</button>{this.state.showZ && < AlienForm / >}
             </div>
             </div>
         )

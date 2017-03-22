@@ -77,6 +77,7 @@ $backgroundColor: #ff5050;
 	justify-content: center;
 	align-items: center;
 	margin: auto;
+  padding: 10px
 }
 
 .alienWrapper {
@@ -98,7 +99,7 @@ margin: auto;
  .nuclearWrapper {
 
     span{
-      font-size: 0.9rem;
+      font-size: 1.5rem;
       text-align:center;
     }
 
@@ -110,7 +111,7 @@ margin: auto;
    .alienWrapper {
 
     span{
-      font-size: 0.9rem;
+      font-size: 1.5rem;
       text-align:center;
     }
 
@@ -122,7 +123,7 @@ margin: auto;
   .zombieWrapper 
 
     span{
-      font-size: 0.9rem;
+      font-size: 1.2rem;
       text-align:center;
     }
 
@@ -131,7 +132,7 @@ margin: auto;
     }
 
   .zombieWrapper h2 {
-    font-size:1.3rem;
+    font-size:1.5rem;
   }
 
   .alienWrapper h2 {
@@ -159,6 +160,7 @@ margin: auto;
 
   .zombieWrapper2 {
     margin-top:10px;
+    padding:10px;
   }
 
   .nuclearWrapper2 {
@@ -168,9 +170,16 @@ margin: auto;
   .alienWrapper2 {
     margin-top:10px;
   }
+
 	.ZombieButton2 {
-		width:70%;
-		margin-bottom:5px;
+		width:90%;
+    padding:5px;
+		// margin-bottom:5px;
+    font-size:1rem;
 	}
+
+  .alienButton {
+    padding:0;
+  }
 }
 
