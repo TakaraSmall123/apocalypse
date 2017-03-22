@@ -1,6 +1,6 @@
 @import 'partials/variables';
 
-
+//ZOMBIE SECTION
 .zombieFightSection{
 height: 100vh;
 background-color: orange;
@@ -9,9 +9,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-
-	
 }
+
 .ZombieButton2 {
 display: flex;
 flex-direction: column;
@@ -19,12 +18,14 @@ justify-content: center;
 align-items: center;
 margin: auto;
 padding: 10px 10px;
+font-size: 1.3rem;
 border: 2px solid black;
-background-color: white;
-		p {
-			text-align: center;
-		}
+font-family:'Bangers', cursive;
+background-color: lightpink;
+	p {
+		text-align: center;
 	}
+}
 
 .ZombieFightButton{
 padding: 15px 0 15px 0;
@@ -32,13 +33,100 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-// margin: auto;
+font-family: $titleFontFamily;
 border: 2px solid black;
-background-color: white;
-width:50%;
+background-color: lightpink;
+width:30%;
+}
 
+
+//NUCLEAR SECTION
+
+.nuclearFightSection{
+height: 100vh;
+background-color: lightpink;
+padding-top: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.nuclearFightButton{
+padding: 15px 0 15px 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+font-family: $titleFontFamily;
+align-items: center;
+border: 2px solid black;
+background-color: lightblue;
+width:30%;
+}
+
+.nuclearButton {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: auto;
+padding: 10px 10px;
+font-size: 1.3rem;
+border: 2px solid black;
+background-color: lightblue;
+font-family: $titleFontFamily;
+text-decoration: none;
+	p {
+		text-align: center;
 	}
+	a {
+		text-decoration: none;
+	}
+}
 
-// .zombieAnimated {
-	
-// }
+//ALIEN SECTION
+
+.alienFightSection{
+height: 100vh;
+background-color: lightblue;
+padding-top: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+
+.alienFightButton{
+padding: 15px 0 15px 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+font-family: $titleFontFamily;
+align-items: center;
+border: 2px solid black;
+background-color: orange;
+width:30%;
+}
+
+.alienButton {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: auto;
+font-size: 1.3rem;
+padding: 10px 10px;
+border: 2px solid black;
+background-color: orange;
+font-family: $titleFontFamily;
+	p {
+		text-align: center;
+	}
+}
+
+.alienAnimated {
+	width:100%;
+
+}

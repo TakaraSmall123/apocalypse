@@ -3,3 +3,174 @@ $titleFontFamily: 'Bangers', cursive;
 $bodyFontFamily:'Montserrat', sans-serif;
 $bodyFontSize: 2rem;
 $backgroundColor: #ff5050;
+
+
+ @media (max-width: 1128px) {
+
+    }
+
+@media (max-width: 940px) {
+  .buttonHolder {
+  display: flex;
+  flex-direction: column;
+  font-size:1rem;
+  }
+
+  .titlePageDescription h1{
+    font-size: 6rem;
+  }
+
+  .titlePageDescription button{
+    font-size: 0.9rem;
+    width:50%;
+  }
+
+}
+       
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+  .zombieSection h1{
+    font-size:3rem;
+  }
+
+  .alienSection h1{
+    font-size:3rem;
+  }
+
+  .nuclearSection h1{
+  	font-size:3rem;
+  }
+
+  .ZombieList {
+    display:flex;
+    flex-direction:column;
+    width: 50%;
+    font-size:1rem;
+    margin-top: 5px;
+  }
+
+  .alienList {
+    display:flex;
+    flex-direction:column;
+    width: 50%;
+    font-size:1rem;
+    margin-top: 5px;
+  }
+
+  .nuclearList {
+    display:flex;
+    flex-direction:column;
+    width: 50%;
+    font-size:1rem;
+    margin-top: 5px;
+  }
+
+.zombieWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.alienWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.nuclearWrapper {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: auto;
+ }
+
+ .nuclearWrapper {
+
+    span{
+      font-size: 0.9rem;
+      text-align:center;
+    }
+
+    p {
+    font-size: 0.9rem;
+    }
+  }
+
+   .alienWrapper {
+
+    span{
+      font-size: 0.9rem;
+      text-align:center;
+    }
+
+    p {
+    font-size: 0.9rem;
+    }
+  }
+
+  .zombieWrapper 
+
+    span{
+      font-size: 0.9rem;
+      text-align:center;
+    }
+
+    p {
+    font-size: 0.9rem;
+    }
+
+  .zombieWrapper h2 {
+    font-size:1.3rem;
+  }
+
+  .alienWrapper h2 {
+    font-size:1.3rem;
+   }
+  
+
+   .nuclearWrapper h2 {
+    font-size:1.3rem;
+  }
+
+  .zombieWrapper2 h2 {
+    font-size:1.3rem;
+
+  }
+
+  .alienWrapper2 h2 {
+    font-size:1.3rem;
+
+  }
+
+  .nuclearWrapper2 h2 {
+    font-size:1.3rem;
+  }
+
+  .zombieWrapper2 {
+    margin-top:10px;
+  }
+
+  .nuclearWrapper2 {
+    margin-top:10px;
+  }
+
+  .alienWrapper2 {
+    margin-top:10px;
+  }
+	.ZombieButton2 {
+		width:70%;
+		margin-bottom:5px;
+	}
+}
+

@@ -58,10 +58,14 @@ border-radius: 5px;
 
 .zombiePack span {
     font-weight: bolder;
-    font-size:1.3rem;
     background-color: #ff5050;
     padding:2px;
     border-radius: 2px;
+}
+
+.zombiePack p{
+    font-size:1.5rem;
+
 }
 
 .zombieWrapper2 {
@@ -84,7 +88,7 @@ border-radius: 5px;
 .ZombieButton {
 
 border: 2px solid black;
-background-color: white;
+background-color: lightpink;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -93,74 +97,201 @@ width:40%;
 margin:auto
 }
 
-
-
-//ALIEN SECTION
-
-.AlienList{
-    text-align: left;
-}
-
-.AlienList h1 {
-font-family: $titleFontFamily;
-font-size:60px;
-}
-
- .AlienList{  
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    // justify-content: center;
-    align-items: center;
-    background-color: lightblue;
- }
-
-
-
 //NUCLEAR SECTION
 
-.nuclearList h1 {
-    margin-top: 0;
-    padding-top:20px;
-    text-align: center;
-    font-size: 5rem;
-    font-family: $titleFontFamily;
+.nuclearSection{
+height: 100vh;
+background-color: pink;
+padding-top: 10px;
 }
 
-.nuclearButton {
-padding: 15px 15px;
-border: 2px solid black;
-background-color: white;
-flex-direction: column;
-justify-content: center;
+.nuclearSection h1 {
 text-align: center;
+font-size: 5rem;
+font-family: $titleFontFamily;
+margin: 0px;
+padding-top: 20px;
 }
 
-.nuclearList{   
-    height: 100vh;
-    background-color: pink;
-    margin:0;
- }
-
-.nuclearList {
-    
+.nuclearSection h2 {
+font-family: $titleFontFamily;
+text-align:center;
+font-size: 2rem;
 }
 
-// .nuclearParagraphs {
-//     border: 2px solid red;
-// }
+.nuclearList{
+width: 100%;
+display: flex;
+flex-direction: row;
+margin: auto;
+margin-bottom:20px;
+margin-top:30px;
+}
+
+.nuclearWrapper{
+flex-direction:column;
+width: 100%;
+justify-content:center;
+padding:0px 20px 0px 20px;
+font-family: $bodyFontFamily;
+background-color: lightblue;
+margin-left: 10px;
+margin-right: 10px;
+border-radius: 5px;
+    h3 {
+         font-weight: bold; 
+         font-size: 1.5rem;
+         font-family: $bodyFontFamily;
+         background-color: $backgroundColor;
+         padding:10px;
+         width: 40%;  
+    }
+}
+
+.nuclearPack span {
+    font-weight: bolder;
+    font-size:2rem;
+    background-color: #ff5050;
+    padding:2px;
+    border-radius: 2px;
+}
+
+.nuclearPack p {
+    font-size: 1.5rem
+}
+
+.nuclearWrapper2 {
+width:100%;
+text-align:center;
+font-weight:bold;
+background-color: lightblue;
+margin-left: 10px;
+margin-right: 10px;
+border-radius: 5px;
+
+    img {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    }
+}
+
+//AlIEN SECTION
+
+.alienSection{
+height: 100vh;
+background-color: lightblue;
+padding-top: 10px;
+}
+
+.alienSection h1 {
+text-align: center;
+font-size: 5rem;
+font-family: $titleFontFamily;
+margin: 0px;
+padding-top: 20px;
+}
+
+.alienSection h2 {
+font-family: $titleFontFamily;
+text-align:center;
+font-size: 2rem;
+}
+
+.alienList{
+width: 100%;
+display: flex;
+flex-direction: row;
+margin: auto;
+margin-bottom:20px;
+margin-top:30px;
+}
+
+.alienWrapper{
+flex-direction:column;
+width: 100%;
+justify-content:center;
+padding:0px 20px 0px 20px;
+font-family: $bodyFontFamily;
+background-color: orange;
+margin-left: 10px;
+margin-right: 10px;
+border-radius: 5px;
+    h3 {
+         font-weight: bold; 
+         font-size: 1.5rem;
+         font-family: $bodyFontFamily;
+         background-color: $backgroundColor;
+         padding:10px;
+         width: 40%;  
+    }
+}
+
+.alienPack span {
+    font-weight: bolder;
+    font-size:2rem;
+    background-color: #ff5050;
+    padding:2px;
+    border-radius: 2px;
+}
+
+.alienPack p{
+        font-size:1.5rem;
+}
+
+.alienWrapper2 {
+width:100%;
+text-align:center;
+font-weight:bold;
+background-color: orange;
+margin-left: 10px;
+margin-right: 10px;
+border-radius: 5px;
+
+    img {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    }
+}
+//TRANSFORMATIONS
+
+.back{
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 10px 20px 0px 20px;
+        a {
+        color:$backgroundColor;
+        font-size: 1em;
+        padding-top: 10px;
+        text-decoration: none;
+        font-family: $titleFontFamily;
+
+        }
+            a:hover{
+            transform: scale(1);
+            transition: all 0.3s;
+            }
+}
+
 
 .monster {
     transform: translateX(0);
     transition: transform 0.2s;
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.monster img {
-        float:left;
-        width: 20%;
-        margin: auto;
-    }
+.monster img{
+    border: 2px solid green;
+    width:20%;
+}
 
 .isHit {
    transform: translateX(-50px);

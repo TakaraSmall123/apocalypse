@@ -1,3 +1,271 @@
+@media (max-width: 940px) {
+  .buttonHolder {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 1rem; }
+  .titlePageDescription h1 {
+    font-size: 6rem; }
+  .titlePageDescription button {
+    font-size: 0.9rem;
+    width: 50%; } }
+
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .zombieSection h1 {
+    font-size: 3rem; }
+  .alienSection h1 {
+    font-size: 3rem; }
+  .nuclearSection h1 {
+    font-size: 3rem; }
+  .ZombieList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .nuclearList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .zombieWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .alienWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .nuclearWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .nuclearWrapper span {
+    font-size: 0.9rem;
+    text-align: center; }
+  .nuclearWrapper p {
+    font-size: 0.9rem; }
+  .alienWrapper span {
+    font-size: 0.9rem;
+    text-align: center; }
+  .alienWrapper p {
+    font-size: 0.9rem; }
+  .zombieWrapper
+span {
+    font-size: 0.9rem;
+    text-align: center; }
+  p {
+    font-size: 0.9rem; }
+  .zombieWrapper h2 {
+    font-size: 1.3rem; }
+  .alienWrapper h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper h2 {
+    font-size: 1.3rem; }
+  .zombieWrapper2 h2 {
+    font-size: 1.3rem; }
+  .alienWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .zombieWrapper2 {
+    margin-top: 10px; }
+  .nuclearWrapper2 {
+    margin-top: 10px; }
+  .alienWrapper2 {
+    margin-top: 10px; }
+  .ZombieButton2 {
+    width: 70%;
+    margin-bottom: 5px; } }
+
+@media (max-width: 940px) {
+  .buttonHolder {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 1rem; }
+  .titlePageDescription h1 {
+    font-size: 6rem; }
+  .titlePageDescription button {
+    font-size: 0.9rem;
+    width: 50%; } }
+
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .zombieSection h1 {
+    font-size: 3rem; }
+  .alienSection h1 {
+    font-size: 3rem; }
+  .nuclearSection h1 {
+    font-size: 3rem; }
+  .ZombieList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .nuclearList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .zombieWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .alienWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .nuclearWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .nuclearWrapper span {
+    font-size: 0.9rem;
+    text-align: center; }
+  .nuclearWrapper p {
+    font-size: 0.9rem; }
+  .alienWrapper span {
+    font-size: 0.9rem;
+    text-align: center; }
+  .alienWrapper p {
+    font-size: 0.9rem; }
+  .zombieWrapper
+span {
+    font-size: 0.9rem;
+    text-align: center; }
+  p {
+    font-size: 0.9rem; }
+  .zombieWrapper h2 {
+    font-size: 1.3rem; }
+  .alienWrapper h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper h2 {
+    font-size: 1.3rem; }
+  .zombieWrapper2 h2 {
+    font-size: 1.3rem; }
+  .alienWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .zombieWrapper2 {
+    margin-top: 10px; }
+  .nuclearWrapper2 {
+    margin-top: 10px; }
+  .alienWrapper2 {
+    margin-top: 10px; }
+  .ZombieButton2 {
+    width: 70%;
+    margin-bottom: 5px; } }
+
 .titlePageIntro {
   height: 100vh;
   background-color: black;
@@ -7,7 +275,7 @@
 
 .titlePageDescription h1 {
   color: #ff5050;
-  font-size: 10em;
+  font-size: 10rem;
   margin: 0px;
   font-family: "Bangers", cursive;
   animation: fadein 2s;
@@ -91,6 +359,140 @@ label {
 body {
   margin: 0; }
 
+@media (max-width: 940px) {
+  .buttonHolder {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 1rem; }
+  .titlePageDescription h1 {
+    font-size: 6rem; }
+  .titlePageDescription button {
+    font-size: 0.9rem;
+    width: 50%; } }
+
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .zombieSection h1 {
+    font-size: 3rem; }
+  .alienSection h1 {
+    font-size: 3rem; }
+  .nuclearSection h1 {
+    font-size: 3rem; }
+  .ZombieList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .nuclearList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .zombieWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .alienWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .nuclearWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .nuclearWrapper span {
+    font-size: 0.9rem;
+    text-align: center; }
+  .nuclearWrapper p {
+    font-size: 0.9rem; }
+  .alienWrapper span {
+    font-size: 0.9rem;
+    text-align: center; }
+  .alienWrapper p {
+    font-size: 0.9rem; }
+  .zombieWrapper
+span {
+    font-size: 0.9rem;
+    text-align: center; }
+  p {
+    font-size: 0.9rem; }
+  .zombieWrapper h2 {
+    font-size: 1.3rem; }
+  .alienWrapper h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper h2 {
+    font-size: 1.3rem; }
+  .zombieWrapper2 h2 {
+    font-size: 1.3rem; }
+  .alienWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .zombieWrapper2 {
+    margin-top: 10px; }
+  .nuclearWrapper2 {
+    margin-top: 10px; }
+  .alienWrapper2 {
+    margin-top: 10px; }
+  .ZombieButton2 {
+    width: 70%;
+    margin-bottom: 5px; } }
+
 .zombieLogo2 img {
   width: 10%; }
 
@@ -147,10 +549,12 @@ body {
 
 .zombiePack span {
   font-weight: bolder;
-  font-size: 1.3rem;
   background-color: #ff5050;
   padding: 2px;
   border-radius: 2px; }
+
+.zombiePack p {
+  font-size: 1.5rem; }
 
 .zombieWrapper2 {
   width: 100%;
@@ -172,7 +576,7 @@ body {
 
 .ZombieButton {
   border: 2px solid black;
-  background-color: white;
+  background-color: lightpink;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -188,50 +592,180 @@ body {
   width: 40%;
   margin: auto; }
 
-.AlienList {
-  text-align: left; }
-
-.AlienList h1 {
-  font-family: "Bangers", cursive;
-  font-size: 60px; }
-
-.AlienList {
+.nuclearSection {
   height: 100vh;
+  background-color: pink;
+  padding-top: 10px; }
+
+.nuclearSection h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-family: "Bangers", cursive;
+  margin: 0px;
+  padding-top: 20px; }
+
+.nuclearSection h2 {
+  font-family: "Bangers", cursive;
+  text-align: center;
+  font-size: 2rem; }
+
+.nuclearList {
+  width: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 30px; }
+
+.nuclearWrapper {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-size: 20px;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: lightblue; }
-
-.nuclearList h1 {
-  margin-top: 0;
-  padding-top: 20px;
-  text-align: center;
-  font-size: 5rem;
-  font-family: "Bangers", cursive; }
-
-.nuclearButton {
-  padding: 15px 15px;
-  border: 2px solid black;
-  background-color: white;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  width: 100%;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  text-align: center; }
+  padding: 0px 20px 0px 20px;
+  font-family: "Montserrat", sans-serif;
+  background-color: lightblue;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px; }
+  .nuclearWrapper h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ff5050;
+    padding: 10px;
+    width: 40%; }
 
-.nuclearList {
+.nuclearPack span {
+  font-weight: bolder;
+  font-size: 2rem;
+  background-color: #ff5050;
+  padding: 2px;
+  border-radius: 2px; }
+
+.nuclearPack p {
+  font-size: 1.5rem; }
+
+.nuclearWrapper2 {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  background-color: lightblue;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px; }
+  .nuclearWrapper2 img {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+
+.alienSection {
   height: 100vh;
-  background-color: pink;
-  margin: 0; }
+  background-color: lightblue;
+  padding-top: 10px; }
+
+.alienSection h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-family: "Bangers", cursive;
+  margin: 0px;
+  padding-top: 20px; }
+
+.alienSection h2 {
+  font-family: "Bangers", cursive;
+  text-align: center;
+  font-size: 2rem; }
+
+.alienList {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 30px; }
+
+.alienWrapper {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0px 20px 0px 20px;
+  font-family: "Montserrat", sans-serif;
+  background-color: orange;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px; }
+  .alienWrapper h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ff5050;
+    padding: 10px;
+    width: 40%; }
+
+.alienPack span {
+  font-weight: bolder;
+  font-size: 2rem;
+  background-color: #ff5050;
+  padding: 2px;
+  border-radius: 2px; }
+
+.alienPack p {
+  font-size: 1.5rem; }
+
+.alienWrapper2 {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  background-color: orange;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px; }
+  .alienWrapper2 img {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+
+.back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px 0px 20px; }
+  .back a {
+    color: #ff5050;
+    font-size: 1em;
+    padding-top: 10px;
+    text-decoration: none;
+    font-family: "Bangers", cursive; }
+  .back a:hover {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    transition: all 0.3s; }
 
 .monster {
   -webkit-transform: translateX(0);
@@ -239,12 +773,23 @@ body {
   transform: translateX(0);
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s; }
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .monster img {
-  float: left;
-  width: 20%;
-  margin: auto; }
+  border: 2px solid green;
+  width: 20%; }
 
 .isHit {
   -webkit-transform: translateX(-50px);
@@ -255,6 +800,140 @@ body {
 .movieListBox {
   width: 30%;
   float: left; }
+
+@media (max-width: 940px) {
+  .buttonHolder {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 1rem; }
+  .titlePageDescription h1 {
+    font-size: 6rem; }
+  .titlePageDescription button {
+    font-size: 0.9rem;
+    width: 50%; } }
+
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .zombieSection h1 {
+    font-size: 3rem; }
+  .alienSection h1 {
+    font-size: 3rem; }
+  .nuclearSection h1 {
+    font-size: 3rem; }
+  .ZombieList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .nuclearList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .zombieWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .alienWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .nuclearWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto; }
+  .nuclearWrapper span {
+    font-size: 0.9rem;
+    text-align: center; }
+  .nuclearWrapper p {
+    font-size: 0.9rem; }
+  .alienWrapper span {
+    font-size: 0.9rem;
+    text-align: center; }
+  .alienWrapper p {
+    font-size: 0.9rem; }
+  .zombieWrapper
+span {
+    font-size: 0.9rem;
+    text-align: center; }
+  p {
+    font-size: 0.9rem; }
+  .zombieWrapper h2 {
+    font-size: 1.3rem; }
+  .alienWrapper h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper h2 {
+    font-size: 1.3rem; }
+  .zombieWrapper2 h2 {
+    font-size: 1.3rem; }
+  .alienWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .zombieWrapper2 {
+    margin-top: 10px; }
+  .nuclearWrapper2 {
+    margin-top: 10px; }
+  .alienWrapper2 {
+    margin-top: 10px; }
+  .ZombieButton2 {
+    width: 70%;
+    margin-bottom: 5px; } }
 
 .zombieFightSection {
   height: 100vh;
@@ -288,8 +967,10 @@ body {
   align-items: center;
   margin: auto;
   padding: 10px 10px;
+  font-size: 1.3rem;
   border: 2px solid black;
-  background-color: white; }
+  font-family: 'Bangers', cursive;
+  background-color: lightpink; }
   .ZombieButton2 p {
     text-align: center; }
 
@@ -307,9 +988,132 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: "Bangers", cursive;
   border: 2px solid black;
-  background-color: white;
-  width: 50%; }
+  background-color: lightpink;
+  width: 30%; }
+
+.nuclearFightSection {
+  height: 100vh;
+  background-color: lightpink;
+  padding-top: 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.nuclearFightButton {
+  padding: 15px 0 15px 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: "Bangers", cursive;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: lightblue;
+  width: 30%; }
+
+.nuclearButton {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  padding: 10px 10px;
+  font-size: 1.3rem;
+  border: 2px solid black;
+  background-color: lightblue;
+  font-family: "Bangers", cursive;
+  text-decoration: none; }
+  .nuclearButton p {
+    text-align: center; }
+  .nuclearButton a {
+    text-decoration: none; }
+
+.alienFightSection {
+  height: 100vh;
+  background-color: lightblue;
+  padding-top: 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.alienFightButton {
+  padding: 15px 0 15px 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: "Bangers", cursive;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: orange;
+  width: 30%; }
+
+.alienButton {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  font-size: 1.3rem;
+  padding: 10px 10px;
+  border: 2px solid black;
+  background-color: orange;
+  font-family: "Bangers", cursive; }
+  .alienButton p {
+    text-align: center; }
+
+.alienAnimated {
+  width: 100%; }
 
 html {
   font-size: 62.5%; }
