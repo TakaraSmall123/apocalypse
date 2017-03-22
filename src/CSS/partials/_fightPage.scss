@@ -6,14 +6,21 @@ height: 100vh;
 background-color: orange;
 padding-top: 10px;
 display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
 	
 }
 .ZombieButton2 {
-padding: 15px 0 15px 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 margin: auto;
+padding: 10px 10px;
 border: 2px solid black;
 background-color: white;
-width:50%;
 		p {
 			text-align: center;
 		}
@@ -21,13 +28,17 @@ width:50%;
 
 .ZombieFightButton{
 padding: 15px 0 15px 0;
-margin: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+// margin: auto;
 border: 2px solid black;
 background-color: white;
 width:50%;
 
 	}
 
-.zombieAnimated {
+// .zombieAnimated {
 	
-}
+// }

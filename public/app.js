@@ -37150,6 +37150,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+// import ZombieList from './components/ZombieList.js';
+
 var historyApiFallback = require('connect-history-api-fallback');
 var apiKey = '488227614eff4d30d16ad931527dc9a4';
 
@@ -37189,7 +37191,7 @@ var App = function (_React$Component) {
     return App;
 }(_react2.default.Component);
 
-// Survival section
+// SURVIVAL SECTION
 
 
 var Survival = function (_React$Component2) {
@@ -37275,6 +37277,9 @@ var Survival = function (_React$Component2) {
     return Survival;
 }(_react2.default.Component);
 
+//IMAGES THAT ARE APPEARING FIGHT SECTION
+
+
 var NuclearForm = function (_React$Component3) {
     _inherits(NuclearForm, _React$Component3);
 
@@ -37346,6 +37351,9 @@ var ZombieForm = function (_React$Component5) {
 
     return ZombieForm;
 }(_react2.default.Component);
+
+//MONSTER BAKING OVEN
+
 
 var Monster = function (_React$Component6) {
     _inherits(Monster, _React$Component6);
@@ -37419,7 +37427,7 @@ var Monster = function (_React$Component6) {
     return Monster;
 }(_react2.default.Component);
 
-// 'ZombieList' section
+// ZOMBIE SECTION PAGES
 
 
 var ZombieList = function (_React$Component7) {
@@ -37462,7 +37470,7 @@ var ZombieList = function (_React$Component7) {
             }).then(function (movieList) {
                 console.log('this is a test yo zombie killas', movieList);
                 _this10.setState({
-                    movies: movieList.results.splice(3, 6)
+                    movies: movieList.results.splice(0, 3)
                 });
                 console.log(_this10.setState);
             });
@@ -37479,7 +37487,7 @@ var ZombieList = function (_React$Component7) {
                     _react2.default.createElement(
                         'h1',
                         null,
-                        ' Zombie Invasion '
+                        ' Zombie Invasion!!! '
                     ),
                     _react2.default.createElement(
                         'div',
@@ -37490,50 +37498,40 @@ var ZombieList = function (_React$Component7) {
                             _react2.default.createElement(
                                 'h2',
                                 null,
-                                '1. Your must-have pack'
+                                '1. Review your must-have survival pack'
                             ),
                             _react2.default.createElement(
                                 'div',
                                 { className: 'zombiePack' },
                                 _react2.default.createElement(
-                                    'h3',
-                                    null,
-                                    'Deck of cards:'
-                                ),
-                                ' ',
-                                _react2.default.createElement(
                                     'p',
                                     null,
-                                    'While away the time playing with survivors'
-                                ),
-                                _react2.default.createElement(
-                                    'h3',
-                                    null,
-                                    'Cast-iron skillet:'
+                                    _react2.default.createElement(
+                                        'span',
+                                        null,
+                                        'Deck of cards:'
+                                    ),
+                                    ' While away the time playing with survivors'
                                 ),
                                 _react2.default.createElement(
                                     'p',
                                     null,
-                                    'Cooking tool and tool to neutralize zombies'
-                                ),
-                                _react2.default.createElement(
-                                    'h3',
-                                    null,
-                                    'Shelter:'
+                                    _react2.default.createElement(
+                                        'span',
+                                        null,
+                                        'Cast-iron skillet:'
+                                    ),
+                                    ' Cooking tool and tool to neutralize zombies'
                                 ),
                                 _react2.default.createElement(
                                     'p',
                                     null,
-                                    'Look for any items (garbage, bags, etc) that you can stitch together to turn into a house'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                _reactRouter.Link,
-                                { to: '/fight' },
-                                _react2.default.createElement(
-                                    'button',
-                                    { className: 'ZombieButton2' },
-                                    'Are you ready to practice?'
+                                    _react2.default.createElement(
+                                        'span',
+                                        null,
+                                        'Shelter:'
+                                    ),
+                                    ' Look for any items (garbage, bags, etc) that you can stitch together to turn into a house'
                                 )
                             )
                         ),
@@ -37543,7 +37541,7 @@ var ZombieList = function (_React$Component7) {
                             _react2.default.createElement(
                                 'h2',
                                 null,
-                                '2. Your must-see reference guide'
+                                '2. Review your must-see reference movie guide'
                             ),
                             this.state.movies.map(function (movie) {
                                 return _react2.default.createElement(
@@ -37555,6 +37553,15 @@ var ZombieList = function (_React$Component7) {
                             })
                         ),
                         _react2.default.createElement('div', null)
+                    ),
+                    _react2.default.createElement(
+                        _reactRouter.Link,
+                        { to: '/fight' },
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'ZombieButton2' },
+                            'Are you ready to practice?'
+                        )
                     )
                 )
             );
@@ -37593,7 +37600,7 @@ var ZombieFightList = function (_React$Component8) {
                 _react2.default.createElement(
                     'button',
                     { className: 'ZombieFightButton', onClick: this.onClick.bind(this) },
-                    'I\'m ready to kick zombie butt'
+                    'Click on the bad guy to win!'
                 ),
                 this.state.showZ && _react2.default.createElement(ZombieForm, null)
             );
@@ -37603,9 +37610,7 @@ var ZombieFightList = function (_React$Component8) {
     return ZombieFightList;
 }(_react2.default.Component);
 
-//START OF NUCLEAR
-
-// 'NuclearList' section
+//NUCLEAR SECTION PAGES
 
 
 var NuclearList = function (_React$Component9) {
@@ -37664,7 +37669,7 @@ var NuclearList = function (_React$Component9) {
                 _react2.default.createElement(
                     'h1',
                     null,
-                    ' Nuclear Showdown '
+                    ' Nuclear Showdown!!! '
                 ),
                 _react2.default.createElement(
                     'div',
@@ -37771,7 +37776,11 @@ _reactDom2.default.render(_react2.default.createElement(
     _reactRouter.Router,
     { history: _reactRouter.browserHistory },
     _react2.default.createElement(_reactRouter.Route, { path: '/zombie', component: ZombieList }),
-    _react2.default.createElement(_reactRouter.Route, { path: '/fight', component: ZombieFightList }),
+    _react2.default.createElement(
+        _reactRouter.Route,
+        { path: '/fight', component: ZombieFightList },
+        _react2.default.createElement(_reactRouter.Route, { path: '/home', component: App })
+    ),
     _react2.default.createElement(_reactRouter.Route, { path: '/zombie', component: ZombieList }),
     _react2.default.createElement(_reactRouter.Route, { path: '/nuclear', component: NuclearList }),
     _react2.default.createElement(_reactRouter.Route, { path: '/alien', component: AlienList }),

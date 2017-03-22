@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 import { ajax } from 'jquery';
 import { Router, Route, browserHistory, Link } from 'react-router';
+// import ZombieList from './components/ZombieList.js';
 
 const historyApiFallback = require('connect-history-api-fallback');
 const apiKey = '488227614eff4d30d16ad931527dc9a4';
@@ -32,7 +33,7 @@ class App extends React.Component {
     }
 }
 
-// Survival section
+// SURVIVAL SECTION
 class Survival extends React.Component {
     render() {
         return (
@@ -59,6 +60,7 @@ class Survival extends React.Component {
     }
 }
 
+//IMAGES THAT ARE APPEARING FIGHT SECTION
 class NuclearForm extends React.Component {
       constructor() {
         super();
@@ -104,7 +106,7 @@ class ZombieForm extends React.Component {
 
 }
 
-
+//MONSTER BAKING OVEN
 class Monster extends React.Component {
     constructor() {
         super();
@@ -127,7 +129,6 @@ class Monster extends React.Component {
         setTimeout(() => {
             this.monster.classList.remove('isHit');
         }, 300);
-
     }
 
     render() {
@@ -154,7 +155,7 @@ class Monster extends React.Component {
 
 
 
-// 'ZombieList' section
+// ZOMBIE SECTION PAGES
 class ZombieList extends React.Component {
   constructor() {
     super();
@@ -184,7 +185,7 @@ class ZombieList extends React.Component {
     }).then((movieList) => {
         console.log('this is a test yo zombie killas', movieList)
             this.setState({
-                movies: movieList.results.splice(3, 6)
+                movies: movieList.results.splice(0, 3)
             });
                 console.log(this.setState)
         });
@@ -194,22 +195,22 @@ class ZombieList extends React.Component {
         return (
             <div>
             <div className="zombieSection">
-                 <h1> Zombie Invasion </h1>
+                 <h1> Zombie Invasion!!! </h1>
                 <div className="ZombieList">
                     <div className="zombieWrapper">
-                        <h2>1. Your must-have pack</h2>
+                        <h2>1. Review your must-have survival pack</h2>
                         <div className="zombiePack">
-                        <h3>Deck of cards:</h3> <p>While away the time playing with survivors</p>
-                         <h3>Cast-iron skillet:</h3><p>Cooking tool and tool to neutralize zombies</p>
-                        <h3>Shelter:</h3><p>Look for any items (garbage, bags, etc) that you can stitch together to turn into a house</p>
+                        <p><span>Deck of cards:</span> While away the time playing with survivors</p>
+                         <p><span>Cast-iron skillet:</span> Cooking tool and tool to neutralize zombies</p>
+                        <p><span>Shelter:</span> Look for any items (garbage, bags, etc) that you can stitch together to turn into a house</p>
                         </div>
-                        <Link to="/fight"><button className="ZombieButton2">Are you ready to practice?</button></Link>
                     </div>
 
                         <div className="zombieWrapper2">
-                          <h2>2. Your must-see reference guide</h2>
+                          <h2>2. Review your must-see reference movie guide</h2>
                         {this.state.movies.map((movie) => { 
                         return <p className="movieListBox"> <img src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}/></p> 
+
                         })}
 
                         </div>
@@ -218,8 +219,8 @@ class ZombieList extends React.Component {
                 </div>
 
             </div>
-        </div>
-                           
+             <Link to="/fight"><button className="ZombieButton2">Are you ready to practice?</button></Link>
+        </div>     
     </div>
              
         )
@@ -242,7 +243,7 @@ class ZombieFightList extends React.Component {
   render() {
         return (
             <div className="zombieFightSection">
-            <button className="ZombieFightButton" onClick={this.onClick.bind(this)}>I'm ready to kick zombie butt</button>{this.state.showZ && < ZombieForm / >}
+            <button className="ZombieFightButton" onClick={this.onClick.bind(this)}>Click on the bad guy to win!</button>{this.state.showZ && < ZombieForm / >}
             </div>
         )
     }
@@ -250,9 +251,7 @@ class ZombieFightList extends React.Component {
 }
 
 
-//START OF NUCLEAR
-
-// 'NuclearList' section
+//NUCLEAR SECTION PAGES
 class NuclearList extends React.Component {
       constructor() {
     super();
@@ -293,7 +292,7 @@ class NuclearList extends React.Component {
     render() {
         return (
             <div className="nuclearList">
-            <h1> Nuclear Showdown </h1>
+            <h1> Nuclear Showdown!!! </h1>
             <div className="nuclearParagraphs">
                 <p>Gun: Find your grandma's rifle and get ready to fight off those zombies </p>
                 <p>Cloud watching: Pick an interestingly shaped one and ask everyone to say what they think it looks like </p>
@@ -345,6 +344,7 @@ class AlienList extends React.Component {
 ReactDOM.render(<Router history={browserHistory}>
     <Route path="/zombie" component={ZombieList}/>
         <Route path="/fight" component={ZombieFightList} >
+        <Route path="/home" component={App} />
     </Route>
     <Route path="/zombie" component={ZombieList}/>
     <Route path="/nuclear" component={NuclearList} />
