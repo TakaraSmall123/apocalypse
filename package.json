@@ -18,13 +18,22 @@
     "gulp": "^3.9.1",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "babel-preset-stage-2": "^6.22.0"
   },
   "dependencies": {
     "jquery": "^3.1.1",
     "react-router": "^3.0.2"
   }
 }
+
+
+
+   
+

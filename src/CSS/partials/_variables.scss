@@ -44,7 +44,7 @@ $backgroundColor: #ff5050;
   }
 
   .nuclearSection h1{
-  	font-size:3rem;
+    font-size:3rem;
   }
 
   .ZombieList {
@@ -72,20 +72,20 @@ $backgroundColor: #ff5050;
   }
 
 .zombieWrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   padding: 10px
 }
 
 .alienWrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .nuclearWrapper {
@@ -171,12 +171,12 @@ margin: auto;
     margin-top:10px;
   }
 
-	.ZombieButton2 {
-		width:90%;
+  .ZombieButton2 {
+    width:90%;
     padding:5px;
-		// margin-bottom:5px;
+    // margin-bottom:5px;
     font-size:1rem;
-	}
+  }
 
   .alienButton {
     padding:0;

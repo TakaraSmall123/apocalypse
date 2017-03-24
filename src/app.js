@@ -44,12 +44,12 @@ class Survival extends React.Component {
                     </p>
                      <p>Pick your scenario:</p>
                      <div className="buttonHolder">
-                      <Link to="/zombie"><button className="zombie"><img src="../src/images/zombieLogo.png" className="titleImageZombie"/>ZOMBIE </button></Link>
+                      <Link to="/zombie"><button className="zombie"><img src="images/zombieLogo.png" className="titleImageZombie"/>ZOMBIES</button></Link>
                  {this.props.children}
 
-                <Link to="/nuclear"><button className="nuclear" onClick={this.handleClickNuclear}><img src="../src/images/rocketLogo.png" className="titleImage"/>NUCLEAR SHOWDOWN</button></Link>
+                <Link to="/nuclear"><button className="nuclear" onClick={this.handleClickNuclear}><img src="images/rocketLogo.png" className="titleImage"/>NUCLEAR SHOWDOWNLOL</button></Link>
                  {this.props.children} 
-                <Link to="/alien"><button className="alien" onClick={this.handleClickAlien}><img src="../src/images/alienLogo.png" className="titleImage"/>ALIEN INVASION</button></Link>
+                <Link to="/alien"><button className="alien" onClick={this.handleClickAlien}><img src="images/alienLogo.png" className="titleImage"/>ALIEN INVASION</button></Link>
                  {this.props.children}
                  </div>
                 </div>
@@ -74,8 +74,8 @@ class NuclearForm extends React.Component {
                 </nav> 
                 <div className="fightBorder">
                     <div className="zombieAnimated">
-                        <Monster image="../src/images/rockets.png" health={5} name="Rocket"/>
-                        <Monster image="../src/images/TKFight.png" health={10} name="Takara"/>
+                        <Monster image="images/rockets.png" health={5} name="Rocket"/>
+                        <Monster image="images/TKFight.png" health={10} name="Takara"/>
                     </div>
                 </div>
             </div>
@@ -95,8 +95,8 @@ class AlienForm extends React.Component {
                     <Link to="/">Home</Link>
                 </nav> 
                 <div className="zombieAnimated">
-                    <Monster image="../src/images/alienFight.png" health={5} name="Alien" />
-                    <Monster image="../src/images/TKFight.png" health={10} name="Takara" />
+                    <Monster image="images/alienFight.png" health={5} name="Alien" />
+                    <Monster image="images/TKFight.png" health={10} name="Takara" />
                 </div>
             </div>
         )
@@ -115,8 +115,8 @@ class ZombieForm extends React.Component {
                     <Link to="/">Home</Link>
                 </nav> 
                 <div className="zombieAnimated">
-                    <Monster image="../src/images/zombieFight.png" className="zombAnimated" health={5} name="Zombie"/>
-                    <Monster image="../src/images/TKFight.png" className="girlAnimated" health={10} name="Takara"/>
+                    <Monster image="images/zombieFight.png" className="zombAnimated" health={5} name="Zombie"/>
+                    <Monster image="images/TKFight.png" className="girlAnimated" health={10} name="Takara"/>
                 </div>
             </div>
         )
@@ -130,7 +130,7 @@ class Monster extends React.Component {
         super();
         this.state = {
             health: 3,
-            image: "../src/images/zombie2.png"
+            image: "images/zombie2.png"
         }
         this.takeDamage = this.takeDamage.bind(this);
     }

@@ -1,41 +1,81 @@
-const gulp = require('gulp');
-const babel = require('babelify');
-const browserify = require('browserify');
-const source = require('vinyl-source-stream');
-const buffer = require('vinyl-buffer');
-const browserSync = require('browser-sync');
-const reload = browserSync.reload;
-const notify = require('gulp-notify');
-const plumber = require('gulp-plumber');
-const historyApiFallback = require('connect-history-api-fallback');
 
-gulp.task('js', () => {
-    browserify('src/app.js')
-        .transform('babelify', {
-            presets: ['es2015','react']
-        })
-        .bundle()
-        .on('error',notify.onError({
-            message: "Error: <%= error.message %>",
-            title: 'Error in JS 💀'
-        }))
-        .pipe(source('app.js'))
-        .pipe(buffer())
-        .pipe(gulp.dest('public/'))
-        .pipe(reload({stream:true}));
-});
+const gulp              = require('gulp');
+const sass              = require('gulp-sass');
+const concat            = require('gulp-concat');
+const autoprefixer      = require('gulp-autoprefixer');
+const notify            = require('gulp-notify');
+const plumber           = require('gulp-plumber');
+const babelify          = require('babelify');
+const stageTwo          = require('babel-preset-stage-2');
+const browserify        = require('browserify');
+const buffer            = require('vinyl-buffer');
+const source            = require('vinyl-source-stream');
+const historyFallback   = require('connect-history-api-fallback');
+const browserSync       = require('browser-sync').create();
+const reload            = browserSync.reload;
 
-gulp.task('bs', () => {
+
+gulp.task('browser-sync', () => {
     browserSync.init({
         server: {
-            baseDir: './'
-        },
-        middleware: [historyApiFallback()]
-    });
+            baseDir: './public',
+            middleware: [
+                historyFallback()
+            ],
+            ghostMode: false,
+            notify: false
+        }
+    })
 });
 
-
-gulp.task('default', ['js','bs'], () => {
-    gulp.watch('src/**/*.js',['js']);
-    gulp.watch('./public/style.css',reload);
+gulp.task('html', () => {
+    return gulp.src('./src/*.html')
+    .pipe(gulp.dest('./public/'))
+    .pipe(reload({stream: true}));
 });
+
+gulp.task('images', () => {
+    return gulp.src('./src/images/*.*')
+    .pipe(gulp.dest('./public/images/'))
+    .pipe(reload({stream: true}));
+});
+
+gulp.task('styles', () => {
+    return gulp.src('./src/CSS/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer('last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('./public/CSS/'))
+    .pipe(reload({stream: true}));
+});
+
+gulp.task('es6', () => {
+    return browserify('./src/app.js', { debug: true })
+    .transform('babelify', {
+        sourceMaps: true,
+        presets: [
+            'es2015',
+            'react',
+            'stage-2'
+            ]
+    })
+    .bundle()
+    .on('error',notify.onError({
+        message: "Error: <%= error.message %>",
+        title: 'Error in JS :skull:'
+    }))
+    .pipe(source('app.js'))
+    .pipe(buffer())
+    .pipe(gulp.dest('./public/'))
+    .pipe(reload({stream: true}));
+});
+
+gulp.task('watch', () => {
+    gulp.watch('./src/CSS/**/*.scss', ['styles']);
+    gulp.watch('./src/**/*.js', ['es6']);
+    gulp.watch('./src/*.html', ['html']);
+});
+
+gulp.task('build', ['html', 'images', 'styles', 'es6']);
+
+gulp.task('default', ['html', 'images', 'styles', 'es6', 'browser-sync', 'watch']);
