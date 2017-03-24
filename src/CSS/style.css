@@ -362,6 +362,11 @@ span {
   transition: all 0.3s;
   margin: 0px; }
 
+.titlePageDescription img:hover {
+  -webkit-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  transform: translateX(-50px); }
+
 .alien {
   width: 10%; }
 
@@ -515,22 +520,18 @@ span {
 
 .zombieSection {
   height: 100vh;
-  background-color: orange;
+  background-color: black;
   padding-top: 10px; }
-
-.zombieSection h2 {
-  font-family: "Bangers", cursive;
-  text-align: center;
-  font-size: 2rem; }
 
 .zombieSection h1 {
   text-align: center;
   font-size: 5rem;
   font-family: "Bangers", cursive;
   margin: 0px;
-  padding-top: 20px; }
+  padding-top: 20px;
+  color: #ff5050; }
 
-.ZombieList {
+.zombieList {
   width: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -539,55 +540,55 @@ span {
   -ms-flex-direction: row;
   flex-direction: row;
   margin: auto;
-  margin-bottom: 20px;
   margin-top: 30px; }
 
+.zombieWrapper h2 {
+  font-family: "Bangers", cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: black; }
+
 .zombieWrapper {
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  width: calc(100% - 20%);
+  margin: 0px 20px 0px 20px;
+  border: 2px solid black;
+  padding-bottom: 30px;
+  padding-bottom: 20px; }
+  .zombieWrapper img {
+    width: 12rem;
+    margin: auto; }
+
+.zombieWrapper span {
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 20px; }
+
+.zombieWrapper p {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 100%;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 50px 20px 50px 20px;
-  font-family: "Montserrat", sans-serif;
-  background-color: lightpink;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 5px; }
-  .zombieWrapper h3 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    font-family: "Montserrat", sans-serif;
-    background-color: #ff5050;
-    padding: 10px;
-    width: 40%; }
-
-.zombiePack span {
-  font-weight: bolder;
-  background-color: #ff5050;
-  padding: 2px;
-  border-radius: 2px;
-  font-size: 1.6rem; }
-
-.zombiePack p {
-  font-size: 1.5rem; }
+  padding: 30px; }
 
 .zombieWrapper2 {
-  width: 100%;
   text-align: center;
   font-weight: bold;
-  background-color: lightpink;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-  padding: 50px 20px 50px 20px; }
+  background-color: white;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
   .zombieWrapper2 img {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -611,9 +612,55 @@ span {
   width: 40%;
   margin: auto; }
 
+.zombieList2 {
+  background-color: white;
+  margin: 0px 20px 0px 20px;
+  padding-top: 5px;
+  width: calc(100% - 20%); }
+  .zombieList2 img {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-bottom: 30px; }
+
+.zombieList2 h2 {
+  font-family: "Bangers", cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: black; }
+
+.ZombieButton2 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  padding: 15px 15px;
+  font-size: 2rem;
+  border: 2px solid black;
+  font-family: 'Bangers', cursive;
+  background-color: white;
+  margin-top: 20px; }
+  .ZombieButton2 p {
+    text-align: center; }
+
 .nuclearSection {
   height: 100vh;
-  background-color: pink;
+  background-color: black;
   padding-top: 10px; }
 
 .nuclearSection h1 {
@@ -621,12 +668,8 @@ span {
   font-size: 5rem;
   font-family: "Bangers", cursive;
   margin: 0px;
-  padding-top: 20px; }
-
-.nuclearSection h2 {
-  font-family: "Bangers", cursive;
-  text-align: center;
-  font-size: 2rem; }
+  padding-top: 20px;
+  color: #ff5050; }
 
 .nuclearList {
   width: 100%;
@@ -637,59 +680,83 @@ span {
   -ms-flex-direction: row;
   flex-direction: row;
   margin: auto;
-  margin-bottom: 20px;
   margin-top: 30px; }
 
+.nuclearSection h2 {
+  font-family: "Bangers", cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: black; }
+
 .nuclearWrapper {
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  width: calc(100% - 20%);
+  margin: 0px 20px 0px 20px;
+  border: 2px solid black;
+  padding-bottom: 30px;
+  padding-bottom: 20px; }
+  .nuclearWrapper img {
+    width: 12rem;
+    margin: auto;
+    padding-bottom: 15px; }
+
+.nuclearWrapper span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 20px; }
+
+.nuclearWrapper p {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 100%;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 50px 20px 50px 20px;
-  font-family: "Montserrat", sans-serif;
-  background-color: lightblue;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 5px; }
-  .nuclearWrapper h3 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    font-family: "Montserrat", sans-serif;
-    background-color: #ff5050;
-    padding: 10px;
-    width: 40%; }
-
-.nuclearPack span {
-  font-weight: bolder;
-  font-size: 1.6rem;
-  background-color: #ff5050;
-  padding: 2px;
-  border-radius: 2px; }
-
-.nuclearPack p {
-  font-size: 1.5rem; }
+  padding: 30px; }
 
 .nuclearWrapper2 {
-  width: 100%;
   text-align: center;
   font-weight: bold;
-  background-color: lightblue;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-  padding: 50px 20px 50px 20px; }
+  background-color: white;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
   .nuclearWrapper2 img {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
+
+.nuclearList2 {
+  background-color: white;
+  margin: 0px 20px 0px 20px;
+  padding-top: 5px;
+  width: calc(100% - 20%); }
+  .nuclearList2 img {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-bottom: 30px; }
+
+.nuclearList2 h2 {
+  font-family: "Bangers", cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: black; }
 
 .alienSection {
   height: 100vh;
@@ -808,7 +875,8 @@ span {
   -ms-flex-align: center;
   align-items: center;
   width: 40%;
-  font-weight: bold; }
+  font-weight: bold;
+  color: red; }
 
 .monster img {
   width: 100%;
@@ -985,7 +1053,7 @@ span {
 
 .zombieFightSection {
   height: 100vh;
-  background-color: orange;
+  background-color: black;
   padding-top: 10px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -999,28 +1067,6 @@ span {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
-
-.ZombieButton2 {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: auto;
-  padding: 15px 15px;
-  font-size: 2rem;
-  border: 2px solid black;
-  font-family: 'Bangers', cursive;
-  background-color: lightpink; }
-  .ZombieButton2 p {
-    text-align: center; }
 
 .ZombieFightButton {
   padding: 20px;
@@ -1039,12 +1085,19 @@ span {
   align-items: center;
   font-family: "Bangers", cursive;
   border: 2px solid black;
-  background-color: lightpink;
+  background-color: white;
   width: 30%; }
+
+.ZombieFightButton:hover {
+  cursor: hand;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: all 0.5s; }
 
 .nuclearFightSection {
   height: 100vh;
-  background-color: lightpink;
+  background-color: black;
   padding-top: 10px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1076,8 +1129,15 @@ span {
   -ms-flex-align: center;
   align-items: center;
   border: 2px solid black;
-  background-color: lightblue;
+  background-color: white;
   width: 30%; }
+
+.nuclearFightButton:hover {
+  cursor: hand;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: all 0.5s; }
 
 .nuclearButton {
   display: -webkit-flex;
@@ -1096,9 +1156,10 @@ span {
   padding: 15px 15px;
   font-size: 2rem;
   border: 2px solid black;
-  background-color: lightblue;
+  background-color: white;
   font-family: "Bangers", cursive;
-  text-decoration: none; }
+  text-decoration: none;
+  margin-top: 20px; }
   .nuclearButton p {
     text-align: center; }
   .nuclearButton a {
@@ -1106,7 +1167,7 @@ span {
 
 .alienFightSection {
   height: 100vh;
-  background-color: lightblue;
+  background-color: black;
   padding-top: 10px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1138,7 +1199,7 @@ span {
   -ms-flex-align: center;
   align-items: center;
   border: 2px solid black;
-  background-color: orange;
+  background-color: white;
   width: 30%; }
 
 .alienButton {
@@ -1158,10 +1219,17 @@ span {
   font-size: 2rem;
   padding: 15px 15px;
   border: 2px solid black;
-  background-color: orange;
+  background-color: white;
   font-family: "Bangers", cursive; }
   .alienButton p {
     text-align: center; }
+
+.nuclearFightButton:hover {
+  cursor: hand;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: all 0.5s; }
 
 .alienAnimated, .zombieAnimated, .nuclearAnimated {
   width: 80%;

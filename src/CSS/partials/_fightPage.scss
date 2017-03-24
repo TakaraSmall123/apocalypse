@@ -3,7 +3,7 @@
 //ZOMBIE SECTION
 .zombieFightSection{
 height: 100vh;
-background-color: orange;
+background-color: black;
 padding-top: 10px;
 display: flex;
 flex-direction: column;
@@ -11,23 +11,8 @@ justify-content: center;
 align-items: center;
 }
 
-.ZombieButton2 {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin: auto;
-padding: 15px 15px;
-font-size: 2rem;
-border: 2px solid black;
-font-family:'Bangers', cursive;
-background-color: white;
-	p {
-		text-align: center;
-	}
-}
 
-.ZombieFightButton{
+.ZombieFightButton {
 padding: 20px;
 font-size: 2rem;
 display: flex;
@@ -36,16 +21,21 @@ justify-content: center;
 align-items: center;
 font-family: $titleFontFamily;
 border: 2px solid black;
-background-color: lightpink;
+background-color: white;
 width:30%;
 }
 
+.ZombieFightButton:hover {
+cursor: hand;
+transform: scale(1.1);
+transition: all 0.5s;
+}
 
 //NUCLEAR SECTION
 
 .nuclearFightSection{
 height: 100vh;
-background-color: lightpink;
+background-color: black;
 padding-top: 10px;
 display: flex;
 flex-direction: column;
@@ -62,8 +52,14 @@ justify-content: center;
 font-family: $titleFontFamily;
 align-items: center;
 border: 2px solid black;
-background-color: lightblue;
+background-color: white;
 width:30%;
+}
+
+.nuclearFightButton:hover {
+cursor: hand;
+transform: scale(1.1);
+transition: all 0.5s;
 }
 
 .nuclearButton {
@@ -75,9 +71,10 @@ margin: auto;
 padding: 15px 15px;
 font-size: 2rem;
 border: 2px solid black;
-background-color: lightblue;
+background-color: white;
 font-family: $titleFontFamily;
 text-decoration: none;
+margin-top:20px;
 	p {
 		text-align: center;
 	}
@@ -90,7 +87,7 @@ text-decoration: none;
 
 .alienFightSection{
 height: 100vh;
-background-color: lightblue;
+background-color: black;
 padding-top: 10px;
 display: flex;
 flex-direction: column;
@@ -107,7 +104,7 @@ justify-content: center;
 font-family: $titleFontFamily;
 align-items: center;
 border: 2px solid black;
-background-color: orange;
+background-color: white;
 width:30%;
 }
 
@@ -120,12 +117,19 @@ margin: auto;
 font-size: 2rem;
 padding: 15px 15px;
 border: 2px solid black;
-background-color: orange;
+background-color: white;
 font-family: $titleFontFamily;
 	p {
 		text-align: center;
 	}
 }
+
+.nuclearFightButton:hover {
+cursor: hand;
+transform: scale(1.1);
+transition: all 0.5s;
+}
+
 
 .alienAnimated, .zombieAnimated, .nuclearAnimated {
 	width:80%;

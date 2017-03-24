@@ -2,7 +2,6 @@
 
 
 //ZOMBIE SECTION
-
 .zombieLogo2 img {
     width: 10%;
 }
@@ -11,12 +10,6 @@
 height: 100vh;
 background-color: black;
 padding-top: 10px;
-}
-
-.zombieSection h2 {
-font-family: $titleFontFamily;
-text-align:center;
-font-size: 2rem;
 }
 
 .zombieSection h1 {
@@ -28,68 +21,64 @@ padding-top: 20px;
 color: $backgroundColor
 }
 
-.ZombieList{
+.zombieList{
 width: 100%;
 display: flex;
 flex-direction: row;
 margin: auto;
-margin-bottom:20px;
 margin-top:30px;
 }
 
+.zombieWrapper h2 {
+font-family: $titleFontFamily;
+text-align:center;
+font-size: 3rem;
+color: black;
+}
+
 .zombieWrapper{
-flex-direction:column;
-width: 100%;
-justify-content:center;
-padding:50px 20px 50px 20px;
 font-family: $bodyFontFamily;
 background-color: white;
-margin-left: 10px;
-margin-right: 10px;
-border-radius: 5px;
-    h3 {
-         font-weight: bold; 
-         font-size: 1.5rem;
-         font-family: $bodyFontFamily;
-         background-color: $backgroundColor;
-         padding:10px;
-         width: 40%;  
+width: calc(100% - 20%);
+margin:0px 20px 0px 20px;
+border: 2px solid black;
+padding-bottom:30px;
+padding-bottom:20px;
+    img {
+        width:12rem;
+        margin:auto;
     }
 }
 
-.zombiePack span {
-    font-weight: bolder;
-    background-color: #ff5050;
-    padding:2px;
-    border-radius: 2px;
-    font-size: 1.6rem;
+.zombieWrapper span{
+font-weight:bold;
+font-size: 2rem;
+padding-bottom:20px;
 }
 
-.zombiePack p{
-    font-size:1.5rem;
-
+.zombieWrapper p{
+display:flex;
+flex-direction:column;
+padding: 30px;
 }
 
 .zombieWrapper2 {
-width:100%;
 text-align:center;
 font-weight:bold;
 background-color: white;
-margin-left: 10px;
-margin-right: 10px;
-border-radius: 5px;
-padding:50px 20px 50px 20px;
+display: flex;
+flex-direction: row;
 
     img {
     display: flex;
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     flex-wrap: wrap;
+
     }
 }
 
 .ZombieButton {
-
 border: 2px solid black;
 background-color: lightpink;
 display: flex;
@@ -98,14 +87,53 @@ justify-content: center;
 align-items: center;
 width:40%;
 margin:auto;
-
 }
+
+.zombieList2 {
+background-color: white;
+margin:0px 20px 0px 20px;
+padding-top:5px;
+width: calc(100% - 20%);
+    img {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding-bottom:30px;
+    }
+}
+
+.zombieList2 h2{
+font-family: $titleFontFamily;
+text-align:center;
+font-size: 3rem;
+color:black;
+}
+
+.ZombieButton2 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: auto;
+padding: 15px 15px;
+font-size: 2rem;
+border: 2px solid black;
+font-family:'Bangers', cursive;
+background-color: white;
+margin-top:20px;
+    p {
+        text-align: center;
+    }
+}
+
 
 //NUCLEAR SECTION
 
 .nuclearSection{
 height: 100vh;
-background-color: pink;
+background-color: black;
 padding-top: 10px;
 }
 
@@ -115,66 +143,89 @@ font-size: 5rem;
 font-family: $titleFontFamily;
 margin: 0px;
 padding-top: 20px;
-}
-
-.nuclearSection h2 {
-font-family: $titleFontFamily;
-text-align:center;
-font-size: 2rem;
+color: $backgroundColor;
 }
 
 .nuclearList{
 width: 100%;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 margin: auto;
-margin-bottom:20px;
 margin-top:30px;
 }
 
+
+.nuclearSection h2 {
+font-family: $titleFontFamily;
+text-align:center;
+font-size: 3rem;
+color: black;
+// border:2px solid black;
+}
+
 .nuclearWrapper{
-flex-direction:column;
-width: 100%;
-justify-content:center;
 font-family: $bodyFontFamily;
-background-color: lightblue;
-border-radius: 5px;
-    h3 {
-         font-weight: bold; 
-         font-size: 1.5rem;
-         font-family: $bodyFontFamily;
-         background-color: $backgroundColor;
-         padding:10px;
-         width: 40%;  
+background-color: white;
+width: calc(100% - 20%);
+margin:0px 20px 0px 20px;
+border: 2px solid black;
+padding-bottom:30px;
+padding-bottom:20px;
+        img {
+        width:12rem;
+        margin:auto;
+        padding-bottom: 15px;
     }
 }
 
-.nuclearPack span {
-    font-weight: bolder;
-    font-size: 1.6rem;
-    background-color: #ff5050;
-    padding:2px;
-    border-radius: 2px;
+.nuclearWrapper span {
+font-weight: bold;
+font-size: 1.5rem;
+padding-bottom:20px;;
 }
 
-.nuclearPack p {
-    font-size: 1.5rem
+.nuclearWrapper p{
+display:flex;
+flex-direction:column;
+padding:30px;
 }
 
 .nuclearWrapper2 {
-width:100%;
 text-align:center;
 font-weight:bold;
-background-color: lightblue;
-border-radius: 5px;
-
+background-color: white;
+display: flex;
+flex-direction: row;
     img {
     display: flex;
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     flex-wrap: wrap;
     }
 }
+
+.nuclearList2 {
+background-color: white;
+margin:0px 20px 0px 20px;
+padding-top:5px;
+width: calc(100% - 20%);
+    img {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding-bottom:30px;
+    }
+}
+
+.nuclearList2 h2{
+font-family: $titleFontFamily;
+text-align:center;
+font-size: 3rem;
+color:black;
+}
+
 
 //AlIEN SECTION
 
@@ -279,21 +330,21 @@ border-radius: 5px;
 
 
 .monster {
-    transform: translateX(0);
-    transition: transform 0.2s;
-     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width:40%;
-    font-weight: bold;
-
+transform: translateX(0);
+transition: transform 0.2s;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+width:40%;
+font-weight: bold;
+color:red;
 }
 
 .monster img{
-    // border: 2px solid green;
-    width:100%;
-    padding-top:20px;
+// border: 2px solid green;
+width:100%;
+padding-top:20px;
 }
 
 .monster p{
@@ -307,13 +358,12 @@ border-radius: 5px;
 }
 
 .isHit {
-   transform: translateX(-50px);
- 
+transform: translateX(-50px);
 }
 
 .isHit {
-   transform: translateX(-50px);
-   color:red;
+transform: translateX(-50px);
+color:red;
 }
 
 .congrats {

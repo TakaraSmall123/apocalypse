@@ -18,7 +18,7 @@ const reload            = browserSync.reload;
 gulp.task('browser-sync', () => {
     browserSync.init({
         server: {
-            baseDir: './public',
+            baseDir: '.',
             middleware: [
                 historyFallback()
             ],
@@ -66,7 +66,7 @@ gulp.task('es6', () => {
     }))
     .pipe(source('app.js'))
     .pipe(buffer())
-    .pipe(gulp.dest('./public/'))
+    .pipe(gulp.dest('./public'))
     .pipe(reload({stream: true}));
 });
 
