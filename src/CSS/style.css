@@ -1,3 +1,6 @@
+body {
+  background-color: black; }
+
 @media (max-width: 940px) {
   .buttonHolder {
     display: -webkit-flex;
@@ -16,32 +19,8 @@
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .zombieSection h1 {
-    font-size: 3rem; }
-  .alienSection h1 {
-    font-size: 3rem; }
   .nuclearSection h1 {
     font-size: 3rem; }
-  .ZombieList {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 50%;
-    font-size: 1rem;
-    margin-top: 5px; }
-  .alienList {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 50%;
-    font-size: 1rem;
-    margin-top: 5px; }
   .nuclearList {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -52,35 +31,6 @@
     width: 50%;
     font-size: 1rem;
     margin-top: 5px; }
-  .zombieWrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: auto;
-    padding: 10px; }
-  .alienWrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: auto; }
   .nuclearWrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -100,43 +50,72 @@
     text-align: center; }
   .nuclearWrapper p {
     font-size: 0.9rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 {
+    margin-top: 10px; }
+  .zombieList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienSection h1 {
+    font-size: 3rem; }
+  .alienList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 0px 50px 0px 50px;
+    width: 100%;
+    border: 2px solid red; }
   .alienWrapper span {
     font-size: 1.5rem;
     text-align: center; }
   .alienWrapper p {
     font-size: 0.9rem; }
-  .zombieWrapper
-span {
-    font-size: 1.2rem;
-    text-align: center; }
-  p {
-    font-size: 0.9rem; }
-  .zombieWrapper h2 {
-    font-size: 1.5rem; }
   .alienWrapper h2 {
-    font-size: 1.3rem; }
-  .nuclearWrapper h2 {
-    font-size: 1.3rem; }
-  .zombieWrapper2 h2 {
     font-size: 1.3rem; }
   .alienWrapper2 h2 {
     font-size: 1.3rem; }
-  .nuclearWrapper2 h2 {
-    font-size: 1.3rem; }
-  .zombieWrapper2 {
-    margin-top: 10px;
-    padding: 10px; }
-  .nuclearWrapper2 {
-    margin-top: 10px; }
   .alienWrapper2 {
     margin-top: 10px; }
-  .ZombieButton2 {
-    width: 90%;
-    padding: 5px;
-    font-size: 1rem; }
   .alienButton {
     padding: 0; } }
 
+body {
+  background-color: black; }
+
 @media (max-width: 940px) {
   .buttonHolder {
     display: -webkit-flex;
@@ -155,32 +134,8 @@ span {
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .zombieSection h1 {
-    font-size: 3rem; }
-  .alienSection h1 {
-    font-size: 3rem; }
   .nuclearSection h1 {
     font-size: 3rem; }
-  .ZombieList {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 50%;
-    font-size: 1rem;
-    margin-top: 5px; }
-  .alienList {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 50%;
-    font-size: 1rem;
-    margin-top: 5px; }
   .nuclearList {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -191,35 +146,6 @@ span {
     width: 50%;
     font-size: 1rem;
     margin-top: 5px; }
-  .zombieWrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: auto;
-    padding: 10px; }
-  .alienWrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: auto; }
   .nuclearWrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -239,40 +165,66 @@ span {
     text-align: center; }
   .nuclearWrapper p {
     font-size: 0.9rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 {
+    margin-top: 10px; }
+  .zombieList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienSection h1 {
+    font-size: 3rem; }
+  .alienList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 0px 50px 0px 50px;
+    width: 100%;
+    border: 2px solid red; }
   .alienWrapper span {
     font-size: 1.5rem;
     text-align: center; }
   .alienWrapper p {
     font-size: 0.9rem; }
-  .zombieWrapper
-span {
-    font-size: 1.2rem;
-    text-align: center; }
-  p {
-    font-size: 0.9rem; }
-  .zombieWrapper h2 {
-    font-size: 1.5rem; }
   .alienWrapper h2 {
-    font-size: 1.3rem; }
-  .nuclearWrapper h2 {
-    font-size: 1.3rem; }
-  .zombieWrapper2 h2 {
     font-size: 1.3rem; }
   .alienWrapper2 h2 {
     font-size: 1.3rem; }
-  .nuclearWrapper2 h2 {
-    font-size: 1.3rem; }
-  .zombieWrapper2 {
-    margin-top: 10px;
-    padding: 10px; }
-  .nuclearWrapper2 {
-    margin-top: 10px; }
   .alienWrapper2 {
     margin-top: 10px; }
-  .ZombieButton2 {
-    width: 90%;
-    padding: 5px;
-    font-size: 1rem; }
   .alienButton {
     padding: 0; } }
 
@@ -376,6 +328,9 @@ label {
 body {
   margin: 0; }
 
+body {
+  background-color: black; }
+
 @media (max-width: 940px) {
   .buttonHolder {
     display: -webkit-flex;
@@ -394,32 +349,8 @@ body {
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .zombieSection h1 {
-    font-size: 3rem; }
-  .alienSection h1 {
-    font-size: 3rem; }
   .nuclearSection h1 {
     font-size: 3rem; }
-  .ZombieList {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 50%;
-    font-size: 1rem;
-    margin-top: 5px; }
-  .alienList {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 50%;
-    font-size: 1rem;
-    margin-top: 5px; }
   .nuclearList {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -430,35 +361,6 @@ body {
     width: 50%;
     font-size: 1rem;
     margin-top: 5px; }
-  .zombieWrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: auto;
-    padding: 10px; }
-  .alienWrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: auto; }
   .nuclearWrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -478,40 +380,66 @@ body {
     text-align: center; }
   .nuclearWrapper p {
     font-size: 0.9rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 {
+    margin-top: 10px; }
+  .zombieList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienSection h1 {
+    font-size: 3rem; }
+  .alienList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 0px 50px 0px 50px;
+    width: 100%;
+    border: 2px solid red; }
   .alienWrapper span {
     font-size: 1.5rem;
     text-align: center; }
   .alienWrapper p {
     font-size: 0.9rem; }
-  .zombieWrapper
-span {
-    font-size: 1.2rem;
-    text-align: center; }
-  p {
-    font-size: 0.9rem; }
-  .zombieWrapper h2 {
-    font-size: 1.5rem; }
   .alienWrapper h2 {
-    font-size: 1.3rem; }
-  .nuclearWrapper h2 {
-    font-size: 1.3rem; }
-  .zombieWrapper2 h2 {
     font-size: 1.3rem; }
   .alienWrapper2 h2 {
     font-size: 1.3rem; }
-  .nuclearWrapper2 h2 {
-    font-size: 1.3rem; }
-  .zombieWrapper2 {
-    margin-top: 10px;
-    padding: 10px; }
-  .nuclearWrapper2 {
-    margin-top: 10px; }
   .alienWrapper2 {
     margin-top: 10px; }
-  .ZombieButton2 {
-    width: 90%;
-    padding: 5px;
-    font-size: 1rem; }
   .alienButton {
     padding: 0; } }
 
@@ -519,7 +447,6 @@ span {
   width: 10%; }
 
 .zombieSection {
-  height: 100vh;
   background-color: black;
   padding-top: 10px; }
 
@@ -558,12 +485,15 @@ span {
   padding-bottom: 20px; }
   .zombieWrapper img {
     width: 12rem;
-    margin: auto; }
+    margin: auto;
+    padding-bottom: 10px; }
 
 .zombieWrapper span {
   font-weight: bold;
-  font-size: 2rem;
-  padding-bottom: 20px; }
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 20px;
+  text-align: center; }
 
 .zombieWrapper p {
   display: -webkit-flex;
@@ -704,7 +634,8 @@ span {
 .nuclearWrapper span {
   font-weight: bold;
   font-size: 1.5rem;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  text-align: center; }
 
 .nuclearWrapper p {
   display: -webkit-flex;
@@ -713,7 +644,8 @@ span {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 30px; }
+  padding: 30px;
+  text-align: center; }
 
 .nuclearWrapper2 {
   text-align: center;
@@ -894,13 +826,9 @@ span {
 .isHit {
   -webkit-transform: translateX(-50px);
   -ms-transform: translateX(-50px);
-  transform: translateX(-50px); }
-
-.isHit {
-  -webkit-transform: translateX(-50px);
-  -ms-transform: translateX(-50px);
   transform: translateX(-50px);
-  color: red; }
+  color: red;
+  background-image: "/src/images/TKFight.png"; }
 
 @keyframes fadein {
   from {
@@ -911,6 +839,9 @@ span {
 .movieListBox {
   width: 30%;
   float: left; }
+
+body {
+  background-color: black; }
 
 @media (max-width: 940px) {
   .buttonHolder {
@@ -930,32 +861,8 @@ span {
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .zombieSection h1 {
-    font-size: 3rem; }
-  .alienSection h1 {
-    font-size: 3rem; }
   .nuclearSection h1 {
     font-size: 3rem; }
-  .ZombieList {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 50%;
-    font-size: 1rem;
-    margin-top: 5px; }
-  .alienList {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 50%;
-    font-size: 1rem;
-    margin-top: 5px; }
   .nuclearList {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -966,35 +873,6 @@ span {
     width: 50%;
     font-size: 1rem;
     margin-top: 5px; }
-  .zombieWrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: auto;
-    padding: 10px; }
-  .alienWrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: auto; }
   .nuclearWrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1014,40 +892,66 @@ span {
     text-align: center; }
   .nuclearWrapper p {
     font-size: 0.9rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 {
+    margin-top: 10px; }
+  .zombieList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienSection h1 {
+    font-size: 3rem; }
+  .alienList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px; }
+  .alienWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 0px 50px 0px 50px;
+    width: 100%;
+    border: 2px solid red; }
   .alienWrapper span {
     font-size: 1.5rem;
     text-align: center; }
   .alienWrapper p {
     font-size: 0.9rem; }
-  .zombieWrapper
-span {
-    font-size: 1.2rem;
-    text-align: center; }
-  p {
-    font-size: 0.9rem; }
-  .zombieWrapper h2 {
-    font-size: 1.5rem; }
   .alienWrapper h2 {
-    font-size: 1.3rem; }
-  .nuclearWrapper h2 {
-    font-size: 1.3rem; }
-  .zombieWrapper2 h2 {
     font-size: 1.3rem; }
   .alienWrapper2 h2 {
     font-size: 1.3rem; }
-  .nuclearWrapper2 h2 {
-    font-size: 1.3rem; }
-  .zombieWrapper2 {
-    margin-top: 10px;
-    padding: 10px; }
-  .nuclearWrapper2 {
-    margin-top: 10px; }
   .alienWrapper2 {
     margin-top: 10px; }
-  .ZombieButton2 {
-    width: 90%;
-    padding: 5px;
-    font-size: 1rem; }
   .alienButton {
     padding: 0; } }
 

@@ -7,7 +7,6 @@
 }
 
 .zombieSection{
-height: 100vh;
 background-color: black;
 padding-top: 10px;
 }
@@ -47,13 +46,16 @@ padding-bottom:20px;
     img {
         width:12rem;
         margin:auto;
+        padding-bottom:10px;
     }
 }
 
 .zombieWrapper span{
 font-weight:bold;
-font-size: 2rem;
+font-size: 1.5rem;
+text-align:center;
 padding-bottom:20px;
+text-align:center;
 }
 
 .zombieWrapper p{
@@ -128,6 +130,17 @@ margin-top:20px;
     }
 }
 
+@media (max-width: 940px) {
+ }
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 480px) {
+}
+  
+@media (max-width: 284px) {
+}
 
 //NUCLEAR SECTION
 
@@ -181,13 +194,17 @@ padding-bottom:20px;
 .nuclearWrapper span {
 font-weight: bold;
 font-size: 1.5rem;
-padding-bottom:20px;;
+padding-bottom:20px;
+text-align: center;
+// width:100%;
 }
 
 .nuclearWrapper p{
 display:flex;
 flex-direction:column;
 padding:30px;
+text-align:center;
+
 }
 
 .nuclearWrapper2 {
@@ -357,13 +374,15 @@ padding-top:20px;
     font-weight: bold;
 }
 
-.isHit {
-transform: translateX(-50px);
-}
+// .isHit {
+// transform: translateX(-50px);
+// background-image:"/src/images/TKFight.png";
+// }
 
 .isHit {
 transform: translateX(-50px);
 color:red;
+background-image:"/src/images/TKFight.png";
 }
 
 .congrats {

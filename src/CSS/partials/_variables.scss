@@ -4,6 +4,10 @@ $bodyFontFamily:'Montserrat', sans-serif;
 $bodyFontSize: 2rem;
 $backgroundColor: #ff5050;
 
+body{
+  background-color:black;
+}
+
 
  @media (max-width: 1128px) {
 
@@ -35,57 +39,16 @@ $backgroundColor: #ff5050;
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
-  .zombieSection h1{
+.nuclearSection h1{
     font-size:3rem;
-  }
-
-  .alienSection h1{
-    font-size:3rem;
-  }
-
-  .nuclearSection h1{
-    font-size:3rem;
-  }
-
-  .ZombieList {
-    display:flex;
-    flex-direction:column;
-    width: 50%;
-    font-size:1rem;
-    margin-top: 5px;
-  }
-
-  .alienList {
-    display:flex;
-    flex-direction:column;
-    width: 50%;
-    font-size:1rem;
-    margin-top: 5px;
-  }
-
-  .nuclearList {
-    display:flex;
-    flex-direction:column;
-    width: 50%;
-    font-size:1rem;
-    margin-top: 5px;
-  }
-
-.zombieWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  padding: 10px
 }
 
-.alienWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+.nuclearList {
+display:flex;
+flex-direction:column;
+width: 50%;
+font-size:1rem;
+margin-top: 5px;
 }
 
 .nuclearWrapper {
@@ -96,7 +59,7 @@ align-items: center;
 margin: auto;
  }
 
- .nuclearWrapper {
+  .nuclearWrapper {
 
     span{
       font-size: 1.5rem;
@@ -108,6 +71,116 @@ margin: auto;
     }
   }
 
+  .nuclearWrapper2 h2 {
+  font-size:1.3rem;
+  }
+
+
+  .nuclearWrapper2 {
+    margin-top:10px;
+  }
+
+
+// Zombie
+
+// .zombieSection h1{
+//     font-size:3rem;
+// }
+
+.zombieList {
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+width: 100%;
+font-size:1rem;
+margin-top: 5px;
+}
+
+// .zombieWrapper {
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// align-items: center;
+// margin: auto;
+//  }
+
+  // .zombieWrapper {
+
+  //   span{
+  //     font-size: 1.5rem;
+  //     text-align:center;
+  //   }
+
+  //   p {
+  //   font-size: 0.9rem;
+  //   }
+  // }
+
+  // .zombieWrapper2 h2 {
+  // font-size:1.3rem;
+  // }
+
+
+  // .zombierWrapper2 {
+  //   margin-top:10px;
+  // }
+
+
+
+  /////
+
+  //
+
+  // .zombieSection h1{
+  //   font-size:3rem;
+  // }
+
+  .alienSection h1{
+    font-size:3rem;
+  }
+
+  // .ZombieList {
+  //   display:flex;
+  //   flex-direction:column;
+  //   width: 50%;
+  //   font-size:1rem;
+  //   margin-top: 5px;
+  // }
+
+  .alienList {
+    display:flex;
+    flex-direction:column;
+    width: 50%;
+    font-size:1rem;
+    margin-top: 5px;
+  }
+
+
+// .zombieWrapper {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   margin: auto;
+//   padding: 10px
+// }
+
+.alienWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0px 50px 0px 50px;
+  width:100%;
+  border: 2px solid red;
+  color:black;
+}
+
+
+
+//alien
    .alienWrapper {
 
     span{
@@ -120,66 +193,77 @@ margin: auto;
     }
   }
 
-  .zombieWrapper 
+//zombie
 
-    span{
-      font-size: 1.2rem;
-      text-align:center;
-    }
+  // .zombieWrapper {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // margin: auto;
 
-    p {
-    font-size: 0.9rem;
-    }
+  //   span{
+  //     font-size: 1.2rem;
+  //     text-align:center;
+  //   }
 
-  .zombieWrapper h2 {
-    font-size:1.5rem;
-  }
+  //   p {
+  //   font-size: 0.9rem;
+  //   }
+  // }
+
+  // .zombieWrapper h2 {
+  //   font-size:1.5rem;
+  // }
+
+
+
+
 
   .alienWrapper h2 {
     font-size:1.3rem;
    }
   
 
-   .nuclearWrapper h2 {
-    font-size:1.3rem;
-  }
+  //  .nuclearWrapper h2 {
+  //   font-size:1.3rem;
+  // }
 
-  .zombieWrapper2 h2 {
-    font-size:1.3rem;
 
-  }
+  // .zombieWrapper2 h2 {
+  //   font-size:1.3rem;
+
+  // }
 
   .alienWrapper2 h2 {
     font-size:1.3rem;
 
   }
 
-  .nuclearWrapper2 h2 {
-    font-size:1.3rem;
-  }
+  // .nuclearWrapper2 h2 {
+  //   font-size:1.3rem;
+  // }
 
-  .zombieWrapper2 {
-    margin-top:10px;
-    padding:10px;
-  }
+  // .zombieWrapper2 {
+  //   margin-top:10px;
+  //   padding:10px;
+  // }
 
-  .nuclearWrapper2 {
-    margin-top:10px;
-  }
 
   .alienWrapper2 {
     margin-top:10px;
   }
 
-  .ZombieButton2 {
-    width:90%;
-    padding:5px;
-    // margin-bottom:5px;
-    font-size:1rem;
-  }
+  // .ZombieButton2 {
+  //   width:90%;
+  //   padding:5px;
+  //   // margin-bottom:5px;
+  //   font-size:1rem;
+  // }
 
   .alienButton {
     padding:0;
   }
 }
+
 

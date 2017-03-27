@@ -148,7 +148,9 @@ class Monster extends React.Component {
         setTimeout(() => {
             this.monster.classList.remove('isHit');
         }, 200);
-    }
+    }   
+
+
 
     render() {
         return (
@@ -159,6 +161,7 @@ class Monster extends React.Component {
                     <img src={this.state.image} onClick={this.takeDamage} /> 
                 }
                 <p> {this.props.name}'s health: <span>{this.state.health}</span></p>
+                
             </div>
         )
     }
