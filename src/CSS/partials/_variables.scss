@@ -4,6 +4,7 @@ $bodyFontFamily:'Montserrat', sans-serif;
 $bodyFontSize: 2rem;
 $backgroundColor: #ff5050;
 
+
 body{
   background-color:black;
 }
@@ -34,12 +35,7 @@ body{
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 
-}
- 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-
-.nuclearSection h1{
+  .nuclearSection h1{
     font-size:3rem;
 }
 
@@ -49,6 +45,8 @@ flex-direction:column;
 width: 50%;
 font-size:1rem;
 margin-top: 5px;
+width:90%;
+margin:20px;
 }
 
 .nuclearWrapper {
@@ -57,6 +55,22 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 margin: auto;
+margin-bottom:20px;
+width:100%;
+ }
+
+ .nuclearWrapper p{
+padding:0px 25px;
+// font-size:2rem;
+ }
+
+ .nuclearList{
+  margin:auto;
+ }
+
+ .nuclearList2{
+  width:100%;
+  margin:auto;
  }
 
   .nuclearWrapper {
@@ -79,6 +93,65 @@ margin: auto;
   .nuclearWrapper2 {
     margin-top:10px;
   }
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+.nuclearSection h1{
+    font-size:3rem;
+}
+
+.nuclearList {
+display:flex;
+flex-direction:column;
+width: 50%;
+font-size:1rem;
+margin-top: 5px;
+width:90%;
+margin:20px;
+}
+
+.nuclearWrapper {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: auto;
+margin-bottom:20px;
+width:100%;
+ }
+
+ .nuclearList2{
+  width:100%;
+  margin:auto;
+ }
+
+  .nuclearWrapper {
+
+    span{
+      font-size: 1.5rem;
+      text-align:center;
+    }
+
+    p {
+    font-size: 0.9rem;
+    }
+  }
+
+  .nuclearWrapper2 h2 {
+  font-size:1.3rem;
+  }
+
+  .nuclearWrapper2 {
+    margin-top:10px;
+  }
+  
+
+  // .nuclearButton{
+  //   // margin-bottom:50px;
+  // }
 
 
 // Zombie

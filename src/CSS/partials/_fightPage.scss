@@ -1,5 +1,41 @@
 @import 'partials/variables';
 
+.monster .pow{
+width:20%;
+position: absolute;
+top: 30px;
+left: 230px;
+}
+
+.monster img{
+width:50%;
+padding-top:100px;
+border: 2px solid red;
+}
+
+.dougAnimated img{
+border: 2px solid blue;
+
+}
+
+.monster {
+	span{
+		font-size:2rem;
+		color: $backgroundColor;
+		text-align:center;
+		padding-top:70px;
+	}
+
+	p{
+	font-size:20px;
+	color:white;
+	font-family: "Bangers", cursive;
+	letter-spacing: 2px;
+	width:100%;
+	text-align:center;
+
+	}
+}
 //ZOMBIE SECTION
 .zombieFightSection{
 height: 100vh;
@@ -10,6 +46,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
+
 
 
 .ZombieFightButton {
@@ -132,7 +169,7 @@ transition: all 0.5s;
 
 
 .alienAnimated, .zombieAnimated, .nuclearAnimated {
-	width:80%;
+	width:100%;
 	display:flex;
 	justify-content:center;
 }

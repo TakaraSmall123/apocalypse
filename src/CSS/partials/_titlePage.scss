@@ -59,7 +59,7 @@ animation: fadein 2s;
 .homePageIntro {
 color: white;
 position: absolute;
-font-size: 2rem;
+font-size: 3rem;
 top:0;
 right: 0;
 padding:10px 20px 0px 20px;
@@ -91,10 +91,6 @@ width: 30%;
 transform: scale(1.2);
 transition: all 0.3s;
 margin: 0px;
-}
-
-.titlePageDescription img:hover {
-transform: translateX(-50px);
 }
 
 .alien {

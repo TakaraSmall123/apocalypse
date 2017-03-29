@@ -17,8 +17,7 @@ body {
     width: 50%; } }
 
 /* Landscape phone to portrait tablet */
-/* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .nuclearSection h1 {
     font-size: 3rem; }
   .nuclearList {
@@ -30,7 +29,9 @@ body {
     flex-direction: column;
     width: 50%;
     font-size: 1rem;
-    margin-top: 5px; }
+    margin-top: 5px;
+    width: 90%;
+    margin: 20px; }
   .nuclearWrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -44,6 +45,60 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%; }
+  .nuclearWrapper p {
+    padding: 0px 25px; }
+  .nuclearList {
+    margin: auto; }
+  .nuclearList2 {
+    width: 100%;
+    margin: auto; }
+  .nuclearWrapper span {
+    font-size: 1.5rem;
+    text-align: center; }
+  .nuclearWrapper p {
+    font-size: 0.9rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 {
+    margin-top: 10px; } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .nuclearSection h1 {
+    font-size: 3rem; }
+  .nuclearList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px;
+    width: 90%;
+    margin: 20px; }
+  .nuclearWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%; }
+  .nuclearList2 {
+    width: 100%;
     margin: auto; }
   .nuclearWrapper span {
     font-size: 1.5rem;
@@ -98,7 +153,8 @@ body {
     margin: auto;
     padding: 0px 50px 0px 50px;
     width: 100%;
-    border: 2px solid red; }
+    border: 2px solid red;
+    color: black; }
   .alienWrapper span {
     font-size: 1.5rem;
     text-align: center; }
@@ -132,8 +188,7 @@ body {
     width: 50%; } }
 
 /* Landscape phone to portrait tablet */
-/* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .nuclearSection h1 {
     font-size: 3rem; }
   .nuclearList {
@@ -145,7 +200,9 @@ body {
     flex-direction: column;
     width: 50%;
     font-size: 1rem;
-    margin-top: 5px; }
+    margin-top: 5px;
+    width: 90%;
+    margin: 20px; }
   .nuclearWrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -159,6 +216,60 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%; }
+  .nuclearWrapper p {
+    padding: 0px 25px; }
+  .nuclearList {
+    margin: auto; }
+  .nuclearList2 {
+    width: 100%;
+    margin: auto; }
+  .nuclearWrapper span {
+    font-size: 1.5rem;
+    text-align: center; }
+  .nuclearWrapper p {
+    font-size: 0.9rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 {
+    margin-top: 10px; } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .nuclearSection h1 {
+    font-size: 3rem; }
+  .nuclearList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px;
+    width: 90%;
+    margin: 20px; }
+  .nuclearWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%; }
+  .nuclearList2 {
+    width: 100%;
     margin: auto; }
   .nuclearWrapper span {
     font-size: 1.5rem;
@@ -213,7 +324,8 @@ body {
     margin: auto;
     padding: 0px 50px 0px 50px;
     width: 100%;
-    border: 2px solid red; }
+    border: 2px solid red;
+    color: black; }
   .alienWrapper span {
     font-size: 1.5rem;
     text-align: center; }
@@ -282,7 +394,7 @@ body {
 .homePageIntro {
   color: white;
   position: absolute;
-  font-size: 2rem;
+  font-size: 3rem;
   top: 0;
   right: 0;
   padding: 10px 20px 0px 20px; }
@@ -347,8 +459,7 @@ body {
     width: 50%; } }
 
 /* Landscape phone to portrait tablet */
-/* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .nuclearSection h1 {
     font-size: 3rem; }
   .nuclearList {
@@ -360,7 +471,9 @@ body {
     flex-direction: column;
     width: 50%;
     font-size: 1rem;
-    margin-top: 5px; }
+    margin-top: 5px;
+    width: 90%;
+    margin: 20px; }
   .nuclearWrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -374,6 +487,60 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%; }
+  .nuclearWrapper p {
+    padding: 0px 25px; }
+  .nuclearList {
+    margin: auto; }
+  .nuclearList2 {
+    width: 100%;
+    margin: auto; }
+  .nuclearWrapper span {
+    font-size: 1.5rem;
+    text-align: center; }
+  .nuclearWrapper p {
+    font-size: 0.9rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 {
+    margin-top: 10px; } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .nuclearSection h1 {
+    font-size: 3rem; }
+  .nuclearList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px;
+    width: 90%;
+    margin: 20px; }
+  .nuclearWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%; }
+  .nuclearList2 {
+    width: 100%;
     margin: auto; }
   .nuclearWrapper span {
     font-size: 1.5rem;
@@ -428,7 +595,8 @@ body {
     margin: auto;
     padding: 0px 50px 0px 50px;
     width: 100%;
-    border: 2px solid red; }
+    border: 2px solid red;
+    color: black; }
   .alienWrapper span {
     font-size: 1.5rem;
     text-align: center; }
@@ -449,6 +617,10 @@ body {
 .zombieSection {
   background-color: black;
   padding-top: 10px; }
+
+.buttonText, .titleImage, .titleImageZombie {
+  display: inline-block;
+  vertical-align: middle; }
 
 .zombieSection h1 {
   text-align: center;
@@ -859,8 +1031,7 @@ body {
     width: 50%; } }
 
 /* Landscape phone to portrait tablet */
-/* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .nuclearSection h1 {
     font-size: 3rem; }
   .nuclearList {
@@ -872,7 +1043,9 @@ body {
     flex-direction: column;
     width: 50%;
     font-size: 1rem;
-    margin-top: 5px; }
+    margin-top: 5px;
+    width: 90%;
+    margin: 20px; }
   .nuclearWrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -886,6 +1059,60 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%; }
+  .nuclearWrapper p {
+    padding: 0px 25px; }
+  .nuclearList {
+    margin: auto; }
+  .nuclearList2 {
+    width: 100%;
+    margin: auto; }
+  .nuclearWrapper span {
+    font-size: 1.5rem;
+    text-align: center; }
+  .nuclearWrapper p {
+    font-size: 0.9rem; }
+  .nuclearWrapper2 h2 {
+    font-size: 1.3rem; }
+  .nuclearWrapper2 {
+    margin-top: 10px; } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .nuclearSection h1 {
+    font-size: 3rem; }
+  .nuclearList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 5px;
+    width: 90%;
+    margin: 20px; }
+  .nuclearWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%; }
+  .nuclearList2 {
+    width: 100%;
     margin: auto; }
   .nuclearWrapper span {
     font-size: 1.5rem;
@@ -940,7 +1167,8 @@ body {
     margin: auto;
     padding: 0px 50px 0px 50px;
     width: 100%;
-    border: 2px solid red; }
+    border: 2px solid red;
+    color: black; }
   .alienWrapper span {
     font-size: 1.5rem;
     text-align: center; }
@@ -954,6 +1182,34 @@ body {
     margin-top: 10px; }
   .alienButton {
     padding: 0; } }
+
+.monster .pow {
+  width: 20%;
+  position: absolute;
+  top: 30px;
+  left: 230px; }
+
+.monster img {
+  width: 50%;
+  padding-top: 100px;
+  border: 2px solid red; }
+
+.dougAnimated img {
+  border: 2px solid blue; }
+
+.monster span {
+  font-size: 2rem;
+  color: #ff5050;
+  text-align: center;
+  padding-top: 70px; }
+
+.monster p {
+  font-size: 20px;
+  color: white;
+  font-family: "Bangers", cursive;
+  letter-spacing: 2px;
+  width: 100%;
+  text-align: center; }
 
 .zombieFightSection {
   height: 100vh;
@@ -1136,7 +1392,7 @@ body {
   transition: all 0.5s; }
 
 .alienAnimated, .zombieAnimated, .nuclearAnimated {
-  width: 80%;
+  width: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;

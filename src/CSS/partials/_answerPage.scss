@@ -11,6 +11,13 @@ background-color: black;
 padding-top: 10px;
 }
 
+.buttonText, .titleImage, .titleImageZombie {
+    display:inline-block;
+    vertical-align: middle;
+    // border:2px solid red;
+}
+
+
 .zombieSection h1 {
 text-align: center;
 font-size: 5rem;
